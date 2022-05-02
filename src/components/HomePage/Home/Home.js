@@ -1,5 +1,5 @@
 import { Button, Card, Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useInventories from '../../../hooks/useInventories';
 import Loading from '../../SharedPage/Loading/Loading';
 import BannerSection from '../BannerSection/BannerSection';
@@ -9,6 +9,11 @@ const Home = () => {
     const [inventories] = useInventories();
     const slicedInventories = inventories.slice(0, 6);
     // console.log(slicedInventories);
+    const navigate = useNavigate();
+
+    const navigateToInventoryDetail = id => {
+        navigate(`/inventory/${id}`);
+    }
 
     return (
         <div>
@@ -45,7 +50,7 @@ const Home = () => {
                                         Supplied By: {inventory.supplierName}
                                     </Card.Text>
 
-                                    <Button variant="primary">Update</Button>
+                                    <Button variant="primary" onClick={() => navigateToInventoryDetail(inventory._id)}>Update</Button>
                                 </Card.Body>
                             </Card>
                         </Container>)

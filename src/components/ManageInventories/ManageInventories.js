@@ -1,11 +1,17 @@
 import React from 'react';
 import { Button, Card, Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useInventories from '../../hooks/useInventories';
 import Loading from '../SharedPage/Loading/Loading';
 
 const ManageInventories = () => {
     const [inventories] = useInventories();
+    const navigate = useNavigate();
+
+    const navigateToInventoryDetail = id => {
+        navigate(`/inventory/${id}`);
+    }
+
     return (
         <div className='my-5'>
             <h2 className='my-5 text-center'>Inventories</h2>
@@ -44,7 +50,7 @@ const ManageInventories = () => {
                                     Supplied By: {inventory.supplierName}
                                 </Card.Text>
 
-                                <Button variant="primary">Update</Button>
+                                <Button variant="primary" onClick={() => navigateToInventoryDetail(inventory._id)}>Update</Button>
                                 <span className='ms-3'>
                                     <Button variant="danger">Delete</Button>
                                 </span>
