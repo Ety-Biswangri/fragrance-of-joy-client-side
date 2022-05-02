@@ -9,8 +9,8 @@ const BannerSection = () => {
         <div>
             <Carousel fade>
                 <Carousel.Item>
-                    <img
-                        className="d-block w-100"
+                    <img style={{ height: "35rem" }}
+                        className="d-block w-100 fluid"
                         src={banner1}
                         alt="First slide"
                     />
@@ -20,8 +20,8 @@ const BannerSection = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img
-                        className="d-block w-100"
+                    <img style={{ height: "35rem" }}
+                        className="d-block w-100 fluid"
                         src={banner2}
                         alt="Second slide"
                     />
@@ -32,8 +32,8 @@ const BannerSection = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img
-                        className="d-block w-100"
+                    <img style={{ height: "35rem" }}
+                        className="d-block w-100 fluid"
                         src={banner3}
                         alt="Third slide"
                     />
