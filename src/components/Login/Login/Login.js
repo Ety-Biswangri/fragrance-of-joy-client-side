@@ -18,6 +18,7 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
     const navigate = useNavigate();
+    console.log(loading)
 
     let location = useLocation();
 
@@ -45,7 +46,7 @@ const Login = () => {
     }
 
     if (loading) {
-        return <Loading></Loading>
+        return <Loading></Loading>;
     }
 
     if (user) {

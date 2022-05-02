@@ -47,7 +47,7 @@ const Registration = () => {
     }
 
     if (loading) {
-        return <Loading></Loading>
+        return <Loading></Loading>;
     }
 
     if (user) {
