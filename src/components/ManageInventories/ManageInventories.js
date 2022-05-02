@@ -29,6 +29,9 @@ const ManageInventories = () => {
                                 </Card.Text>
 
                                 <Button variant="primary">Update</Button>
+                                <span className='ms-3'>
+                                    <Button variant="danger">Delete</Button>
+                                </span>
                             </Card.Body>
                         </Card>
                     </Container>)
