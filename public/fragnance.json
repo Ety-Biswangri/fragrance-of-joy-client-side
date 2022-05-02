@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Chanel Coco Perfume",
+        "image": "https://raw.githubusercontent.com/Ety-Biswangri/images/main/perfumes/chanel-coco.jpg",
+        "description": "Pariatur proident Lorem occaecat veniam deserunt eu anim ipsum elit. Aute pariatur est laborum sunt.",
+        "price": 3700,
+        "quantity": 27,
+        "supplierName": "Alice Hartman"
+    },
+    {
+        "name": "Kenzo Jungle Le Tigre",
+        "image": "https://raw.githubusercontent.com/Ety-Biswangri/images/main/perfumes/kenzo.jpg",
+        "description": "Pariatur proident Lorem occaecat veniam deserunt eu anim ipsum elit. Aute pariatur est laborum sunt.",
+        "price": 2300,
+        "quantity": 27,
+        "supplierName": "Hester Long"
+    },
+    {
+        "name": "Versace Perfume",
+        "image": "https://raw.githubusercontent.com/Ety-Biswangri/images/main/perfumes/versace.jpg",
+        "description": "Pariatur proident Lorem occaecat veniam deserunt eu anim ipsum elit. Aute pariatur est laborum sunt.",
+        "price": 3900,
+        "quantity": 36,
+        "supplierName": "Myra Giles"
+    },
+    {
+        "name": "Bleu de Chanel",
+        "image": "https://raw.githubusercontent.com/Ety-Biswangri/images/main/perfumes/bleu.jpg",
+        "description": "Pariatur proident Lorem occaecat veniam deserunt eu anim ipsum elit. Aute pariatur est laborum sunt.",
+        "price": 3800,
+        "quantity": 38,
+        "supplierName": "Wong Schroeder"
+    },
+    {
+        "name": "Park Avenue Perfume",
+        "image": "https://raw.githubusercontent.com/Ety-Biswangri/images/main/perfumes/park-avenue.jpg",
+        "description": "Pariatur proident Lorem occaecat veniam deserunt eu anim ipsum elit. Aute pariatur est laborum sunt.",
+        "price": 3200,
+        "quantity": 22,
+        "supplierName": "Grace Mosley"
+    },
+    {
+        "name": "Black Opium Eau De Parfum",
+        "image": "https://raw.githubusercontent.com/Ety-Biswangri/images/main/perfumes/black-opium.jpg",
+        "description": "Pariatur proident Lorem occaecat veniam deserunt eu anim ipsum elit. Aute pariatur est laborum sunt.",
+        "price": 3100,
+        "quantity": 38,
+        "supplierName": "Lynne Castaneda"
+    },
+    {
+        "name": "Davidoff Cool Water EDT",
+        "image": "https://raw.githubusercontent.com/Ety-Biswangri/images/main/perfumes/cool-water.jpg",
+        "description": "Pariatur proident Lorem occaecat veniam deserunt eu anim ipsum elit. Aute pariatur est laborum sunt.",
+        "price": 3400,
+        "quantity": 35,
+        "supplierName": "Felecia Gill"
+    }
+]
