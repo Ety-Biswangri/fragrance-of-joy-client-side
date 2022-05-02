@@ -1,0 +1,25 @@
+.sliced-inventories-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+    column-gap: 2rem;
+    row-gap: 3rem;
+    width: 85%;
+}
+
+
+/* responsiveness */
+
+@media screen and (max-width: 1023px) and (min-width: 700px) {
+    .sliced-inventories-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 699px) {
+    .sliced-inventories-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
