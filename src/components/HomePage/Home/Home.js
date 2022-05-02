@@ -10,7 +10,6 @@ const Home = () => {
     // console.log(slicedInventories);
     return (
         <div>
-
             <div>
                 <BannerSection></BannerSection>
             </div>
@@ -50,6 +49,8 @@ const Home = () => {
                     </Link>
                 </div>
             </div>
+
+
         </div>
     );
 };
