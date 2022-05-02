@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Card, Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import useInventories from '../../hooks/useInventories';
 
 const ManageInventories = () => {
@@ -7,7 +8,14 @@ const ManageInventories = () => {
     return (
         <div className='my-5'>
             <h2 className='my-5 text-center'>Inventories</h2>
-            <div className="sliced-inventories-container mb-4">
+
+            <div className='text-center'>
+                <Link to="/addItems">
+                    <Button>Add New Items</Button>
+                </Link>
+            </div>
+
+            <div className="sliced-inventories-container my-4">
                 {
                     inventories.map(inventory => <Container>
                         <Card key={inventory._id} className="card">

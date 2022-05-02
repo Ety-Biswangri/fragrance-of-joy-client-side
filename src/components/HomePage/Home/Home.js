@@ -10,6 +10,7 @@ const Home = () => {
     // console.log(slicedInventories);
     return (
         <div>
+
             <div>
                 <BannerSection></BannerSection>
             </div>
