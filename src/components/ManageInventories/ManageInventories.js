@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Card, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useInventories from '../../hooks/useInventories';
+import Loading from '../SharedPage/Loading/Loading';
 
 const ManageInventories = () => {
     const [inventories] = useInventories();
@@ -14,6 +15,13 @@ const ManageInventories = () => {
                     <Button>Add New Items</Button>
                 </Link>
             </div>
+
+            {
+                inventories.length === 0 ?
+                    <Loading></Loading>
+                    :
+                    ''
+            }
 
             <div className="sliced-inventories-container my-4">
                 {

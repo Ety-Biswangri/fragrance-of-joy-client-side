@@ -1,6 +1,7 @@
 import { Button, Card, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useInventories from '../../../hooks/useInventories';
+import Loading from '../../SharedPage/Loading/Loading';
 import BannerSection from '../BannerSection/BannerSection';
 import './Home.css';
 
@@ -8,6 +9,7 @@ const Home = () => {
     const [inventories] = useInventories();
     const slicedInventories = inventories.slice(0, 6);
     // console.log(slicedInventories);
+
     return (
         <div>
             <div>
@@ -16,6 +18,12 @@ const Home = () => {
 
             <div className='my-5'>
                 <h2 className='my-5 text-center'>Inventories</h2>
+                {
+                    inventories.length === 0 ?
+                        <Loading></Loading>
+                        :
+                        ''
+                }
                 <div className="sliced-inventories-container mb-4">
                     {
                         slicedInventories.map(inventory => <Container>

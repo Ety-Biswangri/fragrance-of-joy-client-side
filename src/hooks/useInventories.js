@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
 
 const useInventories = () => {
     const [inventories, setInventories] = useState([]);
