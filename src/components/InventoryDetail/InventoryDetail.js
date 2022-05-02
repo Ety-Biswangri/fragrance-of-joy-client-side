@@ -8,7 +8,7 @@ const InventoryDetail = () => {
     console.log(inventory);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/inventory/${id}`)
+        fetch(`https://mysterious-wildwood-65853.herokuapp.com/inventory/${id}`)
             .then(res => res.json())
             .then(data => setInventory(data));
     }, [id]);
