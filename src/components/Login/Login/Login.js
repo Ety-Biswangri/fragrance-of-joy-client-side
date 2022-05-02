@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import Loading from '../../SharedPage/Loading/Loading';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -20,6 +22,9 @@ const Login = () => {
     let location = useLocation();
 
     let from = location.state?.from?.pathname || "/";
+
+    const [sendPasswordResetEmail, sending, error2] = useSendPasswordResetEmail
+        (auth);
 
     const handleEmailChange = event => {
         setEmail(event.target.value);
@@ -47,6 +52,16 @@ const Login = () => {
         navigate(from, { replace: true });
     }
 
+    const handleResetPassword = async () => {
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast("Email Sent");
+        }
+        else {
+            toast("Please provide your email");
+        }
+    }
+
     return (
         <div className='w-50 mx-auto my-5'>
             <h1>Please Login</h1>
@@ -69,10 +84,13 @@ const Login = () => {
 
             <p className='mt-3 text-center'>Don't have an account? <Link to="/register" className='text-decoration-none'> Create an account!</Link></p>
 
-            <p className='mt-3 text-center'>Forget Password? <button className='btn btn-link text-decoration-none'> Reset Password</button></p>
+            <p className='mt-3 text-center'>Forget Password? <button className='btn btn-link text-decoration-none' onClick={handleResetPassword}> Reset Password</button></p>
 
             <div>
                 <SocialLogin></SocialLogin>
+            </div>
+            <div>
+                <ToastContainer></ToastContainer>
             </div>
         </div>
     );
