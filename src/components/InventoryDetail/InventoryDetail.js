@@ -24,8 +24,7 @@ const InventoryDetail = () => {
                         <Card.Title>{inventory.name}</Card.Title>
                         <Card.Text>Product Id: {inventory._id}</Card.Text>
                         <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk of
-                            the card's content.
+                            {inventory.description}
                         </Card.Text>
                         <Card.Text>
                             Price: ${inventory.price}
