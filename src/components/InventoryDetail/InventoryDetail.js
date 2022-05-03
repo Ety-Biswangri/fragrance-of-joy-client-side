@@ -7,6 +7,7 @@ const InventoryDetail = () => {
     const { id } = useParams();
     const [inventory, setInventory] = useState({});
     const { register, handleSubmit } = useForm();
+    const [isReload, setIsReload] = useState(false);
 
     // console.log(inventory);
 
@@ -14,10 +15,46 @@ const InventoryDetail = () => {
         fetch(`https://mysterious-wildwood-65853.herokuapp.com/inventory/${id}`)
             .then(res => res.json())
             .then(data => setInventory(data));
-    }, [id]);
+    }, [id, isReload]);
+
+    const handleDelivered = (id) => {
+        const quantity = parseInt(inventory.quantity) - 1;
+        const updateQuantity = { quantity };
+
+        const url = `https://mysterious-wildwood-65853.herokuapp.com/inventory/${id}`;
+
+        fetch(url, {
+            method: "PUT",
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updateQuantity)
+        })
+            .then(res => res.json())
+            .then(result => {
+                setIsReload(!isReload);
+            })
+    }
 
     const onSubmit = data => {
-        console.log(data);
+        // console.log(data);
+
+        const quantity = parseInt(data.quantity) + parseInt(inventory.quantity);
+        const updateQuantity = { quantity };
+
+        const url = `https://mysterious-wildwood-65853.herokuapp.com/inventory/${id}`;
+
+        fetch(url, {
+            method: "PUT",
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updateQuantity)
+        })
+            .then(res => res.json())
+            .then(result => {
+                setIsReload(!isReload);
+            })
 
     };
 
@@ -45,11 +82,12 @@ const InventoryDetail = () => {
                         </Card.Text>
                         <Card.Text>Product Status: Sold</Card.Text>
 
-                        <Button variant="primary mb-4">Delivered</Button>
+                        <Button onClick={() => handleDelivered(id)} variant="primary mb-4">Delivered</Button>
 
                         <div>
                             <form className='' onSubmit={handleSubmit(onSubmit)}>
                                 <input placeholder='Enter quantity' type="number" className='mb-2' {...register("quantity", { required: true, maxLength: 20 })} />
+
                                 <input type="submit" value="Restock" />
                             </form>
                         </div>

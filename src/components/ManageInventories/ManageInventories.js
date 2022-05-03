@@ -13,14 +13,18 @@ const ManageInventories = () => {
     }
 
     const handleDelete = id => {
-        fetch(`https://mysterious-wildwood-65853.herokuapp.com/inventory/${id}`, {
-            method: 'DELETE',
-        })
-            .then(res => res.json())
-            .then(data => {
-                const remainingData = inventories.filter(inventory => inventory._id !== id);
-                setInventories(remainingData);
-            });
+        const confirmation = window.confirm("Are you sure to delete the item?");
+
+        if (confirmation) {
+            fetch(`https://mysterious-wildwood-65853.herokuapp.com/inventory/${id}`, {
+                method: 'DELETE',
+            })
+                .then(res => res.json())
+                .then(data => {
+                    const remainingData = inventories.filter(inventory => inventory._id !== id);
+                    setInventories(remainingData);
+                });
+        }
     }
 
     return (

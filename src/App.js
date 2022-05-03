@@ -23,7 +23,11 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
 
-        <Route path='/manageInventories' element={<ManageInventories></ManageInventories>}></Route>
+        <Route path='/manageInventories' element={
+          <RequireAuth>
+            <ManageInventories></ManageInventories>
+          </RequireAuth>
+        }></Route>
 
         <Route path='/inventory/:id' element={
           <RequireAuth>
@@ -47,11 +51,11 @@ function App() {
           </RequireAuth>
         }></Route>
 
-        <Route path='/manageItems' element={
+        {/* <Route path='/manageItems' element={
           <RequireAuth>
             <ManageItems></ManageItems>
           </RequireAuth>
-        }></Route>
+        }></Route> */}
 
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
