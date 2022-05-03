@@ -1,4 +1,4 @@
-import { Button, Card, Container } from 'react-bootstrap';
+import { Button, Card, CardGroup, Container } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import useInventories from '../../../hooks/useInventories';
 import Loading from '../../SharedPage/Loading/Loading';
@@ -32,26 +32,30 @@ const Home = () => {
                 <div className="sliced-inventories-container mb-4">
                     {
                         slicedInventories.map(inventory => <Container>
-                            <Card key={inventory._id} className="card">
-                                <Card.Img variant="top" src={inventory.image} className="img-fluid image" />
-                                <Card.Body>
-                                    <Card.Title>{inventory.name}</Card.Title>
-                                    <Card.Text>
-                                        {inventory.description}
-                                    </Card.Text>
-                                    <Card.Text>
-                                        Price: ${inventory.price}
-                                    </Card.Text>
-                                    <Card.Text>
-                                        Quantity: {inventory.quantity}
-                                    </Card.Text>
-                                    <Card.Text>
-                                        Supplied By: {inventory.supplierName}
-                                    </Card.Text>
+                            <CardGroup style={{ height: "38rem" }}>
+                                <Card key={inventory._id} className="card-container h-100">
+                                    <Card.Img variant="top" src={inventory.image} className="img-fluid image" />
+                                    <Card.Body>
+                                        <Card.Title>{inventory.name}</Card.Title>
+                                        <Card.Text>
+                                            {inventory.description}
+                                        </Card.Text>
+                                        <Card.Text>
+                                            Price: ${inventory.price}
+                                        </Card.Text>
+                                        <Card.Text>
+                                            Quantity: {inventory.quantity}
+                                        </Card.Text>
+                                        <Card.Text>
+                                            Supplied By: {inventory.supplierName}
+                                        </Card.Text>
 
-                                    <Button variant="primary" onClick={() => navigateToInventoryDetail(inventory._id)}>Update</Button>
-                                </Card.Body>
-                            </Card>
+                                        <div className='d-flex justify-content-center'>
+                                            <Button variant="primary" className='card-button' onClick={() => navigateToInventoryDetail(inventory._id)}>Update</Button>
+                                        </div>
+                                    </Card.Body>
+                                </Card>
+                            </CardGroup>
                         </Container>)
                     }
                 </div>

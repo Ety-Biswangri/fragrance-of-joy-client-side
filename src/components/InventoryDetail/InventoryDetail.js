@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Card, Container } from 'react-bootstrap';
+import { useForm } from 'react-hook-form';
 import { Link, useParams } from 'react-router-dom';
 
 const InventoryDetail = () => {
     const { id } = useParams();
     const [inventory, setInventory] = useState({});
+    const { register, handleSubmit } = useForm();
+
     // console.log(inventory);
 
     useEffect(() => {
@@ -12,6 +15,11 @@ const InventoryDetail = () => {
             .then(res => res.json())
             .then(data => setInventory(data));
     }, [id]);
+
+    const onSubmit = data => {
+        console.log(data);
+
+    };
 
     return (
         <div className='my-5'>
@@ -37,7 +45,14 @@ const InventoryDetail = () => {
                         </Card.Text>
                         <Card.Text>Product Status: Sold</Card.Text>
 
-                        <Button variant="primary">Delivered</Button>
+                        <Button variant="primary mb-4">Delivered</Button>
+
+                        <div>
+                            <form className='' onSubmit={handleSubmit(onSubmit)}>
+                                <input placeholder='Enter quantity' type="number" className='mb-2' {...register("quantity", { required: true, maxLength: 20 })} />
+                                <input type="submit" value="Restock" />
+                            </form>
+                        </div>
                     </Card.Body>
                 </Card>
                 <div className='text-center mt-3'>
