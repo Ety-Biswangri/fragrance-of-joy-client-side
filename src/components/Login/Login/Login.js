@@ -18,7 +18,7 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
     const navigate = useNavigate();
-    console.log(loading)
+    // console.log(loading)
 
     let location = useLocation();
 

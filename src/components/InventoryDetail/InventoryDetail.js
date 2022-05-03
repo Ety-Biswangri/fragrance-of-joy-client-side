@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Card, Container } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const InventoryDetail = () => {
     const { id } = useParams();
     const [inventory, setInventory] = useState({});
-    console.log(inventory);
+    // console.log(inventory);
 
     useEffect(() => {
         fetch(`https://mysterious-wildwood-65853.herokuapp.com/inventory/${id}`)
@@ -41,6 +41,11 @@ const InventoryDetail = () => {
                         <Button variant="primary">Delivered</Button>
                     </Card.Body>
                 </Card>
+                <div className='text-center mt-3'>
+                    <Link to="/manageInventories">
+                        <Button variant="success">Manage Inventories</Button>
+                    </Link>
+                </div>
             </Container>
         </div>
     );
