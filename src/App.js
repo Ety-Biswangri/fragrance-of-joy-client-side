@@ -9,7 +9,6 @@ import ManageInventories from './components/ManageInventories/ManageInventories'
 import Login from './components/Login/Login/Login';
 import Registration from './components/Login/Registration/Registration';
 import AddItems from './components/AddItems/AddItems';
-import ManageItems from './components/ManageItems/ManageItems';
 import MyItems from './components/MyItems/MyItems';
 import RequireAuth from './components/Login/RequireAuth/RequireAuth';
 import InventoryDetail from './components/InventoryDetail/InventoryDetail';

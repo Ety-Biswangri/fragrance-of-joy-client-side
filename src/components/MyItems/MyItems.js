@@ -38,30 +38,6 @@ const MyItems = () => {
 
     }, [user])
 
-    /* useEffect(() => {
-        const url = `http://localhost:5000/inventories?email=${user?.email}`;
-
-        try {
-            fetch(url, {
-                headers: {
-                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
-                }
-            })
-                .then(res => res.json())
-                .then(data => {
-                    setItems(data);
-                })
-        }
-        catch (error) {
-            console.log(error);
-            if (error.response.status === 401 || error.response.status === 403) {
-                signOut(auth);
-                navigate('/login');
-            }
-        }
-
-    }, [user]) */
-
     const handleDelete = id => {
         const confirmation = window.confirm("Are you sure to delete the item?");
 
