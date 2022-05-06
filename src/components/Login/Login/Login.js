@@ -50,7 +50,24 @@ const Login = () => {
     }
 
     if (user) {
-        navigate(from, { replace: true });
+        const url = `https://mysterious-wildwood-65853.herokuapp.com/login`;
+        console.log(user?.user?.email);
+
+        fetch(url, {
+            method: 'POST',
+            body: JSON.stringify({
+                email: user?.user?.email
+            }),
+            headers: {
+                'Content-type': 'application/json',
+            },
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+                localStorage.setItem('accessToken', data.token);
+                navigate(from, { replace: true });
+            });
     }
 
     const handleResetPassword = async () => {
@@ -74,7 +91,7 @@ const Login = () => {
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" required onChange={handlePasswordChange} />
+                    <Form.Control type="password" placeholder="Password" required autoComplete='off' onChange={handlePasswordChange} />
                 </Form.Group>
 
                 <Button variant="primary" type="submit">
