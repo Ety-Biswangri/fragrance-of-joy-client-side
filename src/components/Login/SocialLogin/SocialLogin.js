@@ -4,11 +4,13 @@ import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { BsGoogle } from 'react-icons/bs';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import useAccessToken from '../../../hooks/useAccessToken';
 import Loading from '../../SharedPage/Loading/Loading';
 
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const navigate = useNavigate();
+    const [accessToken] = useAccessToken(user);
 
     let location = useLocation();
 
@@ -23,7 +25,7 @@ const SocialLogin = () => {
         return <Loading></Loading>;
     }
 
-    if (user) {
+    if (accessToken) {
         navigate(from, { replace: true });
     }
 

@@ -7,7 +7,7 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 import Loading from '../../SharedPage/Loading/Loading';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import axios from 'axios';
+import useAccessToken from '../../../hooks/useAccessToken';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -19,7 +19,7 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
     const navigate = useNavigate();
-    // console.log(loading)
+    const [accessToken] = useAccessToken(user);
 
     let location = useLocation();
 
@@ -39,10 +39,6 @@ const Login = () => {
     const handleLogin = async event => {
         event.preventDefault();
         await signInWithEmailAndPassword(email, password);
-
-        const { data } = await axios.post(`https://mysterious-wildwood-65853.herokuapp.com/login`, { email });
-        localStorage.setItem('accessToken', data.accessToken);
-        navigate(from, { replace: true });
     }
 
     let errorMessage;
@@ -54,7 +50,8 @@ const Login = () => {
         return <Loading></Loading>;
     }
 
-    if (user) {
+    if (accessToken) {
+        navigate(from, { replace: true });
     }
 
     const handleResetPassword = async () => {
