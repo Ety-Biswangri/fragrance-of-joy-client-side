@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { Button, Card, CardGroup, Container } from 'react-bootstrap';
@@ -10,8 +11,34 @@ import './MyItems.css';
 const MyItems = () => {
     const [items, setItems] = useState([]);
     const [user] = useAuthState(auth);
+    const navigate = useNavigate();
 
     useEffect(() => {
+
+        const getMyItems = async () => {
+            const url = `http://localhost:5000/items?email=${user?.email}`;
+            try {
+                const { data } = await axios.get(url, {
+                    headers: {
+                        authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                    }
+                });
+                setItems(data);
+            }
+            catch (error) {
+                console.log(error.message);
+                if (error.response.status === 403 || error.response.status === 401) {
+                    signOut(auth);
+                    navigate('/login');
+                }
+            }
+        }
+
+        getMyItems();
+
+    }, [user])
+
+    /* useEffect(() => {
         const url = `http://localhost:5000/inventories?email=${user?.email}`;
 
         try {
@@ -33,14 +60,7 @@ const MyItems = () => {
             }
         }
 
-    }, [user])
-
-
-    const navigate = useNavigate();
-
-    const navigateToInventoryDetail = id => {
-        navigate(`/inventory/${id}`);
-    }
+    }, [user]) */
 
     const handleDelete = id => {
         const confirmation = window.confirm("Are you sure to delete the item?");

@@ -7,6 +7,7 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 import Loading from '../../SharedPage/Loading/Loading';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -35,9 +36,13 @@ const Login = () => {
         setPassword(event.target.value);
     }
 
-    const handleLogin = event => {
+    const handleLogin = async event => {
         event.preventDefault();
-        signInWithEmailAndPassword(email, password);
+        await signInWithEmailAndPassword(email, password);
+
+        const { data } = await axios.post(`http://localhost:5000/login`, { email });
+        localStorage.setItem('accessToken', data.accessToken);
+        navigate(from, { replace: true });
     }
 
     let errorMessage;
@@ -50,24 +55,6 @@ const Login = () => {
     }
 
     if (user) {
-        const url = `http://localhost:5000/login`;
-        // console.log(user?.user?.email);
-
-        fetch(url, {
-            method: 'POST',
-            body: JSON.stringify({
-                email: user?.user?.email
-            }),
-            headers: {
-                'Content-type': 'application/json',
-            },
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                // console.log(data);
-                localStorage.setItem('accessToken', data.token);
-                navigate(from, { replace: true });
-            });
     }
 
     const handleResetPassword = async () => {
