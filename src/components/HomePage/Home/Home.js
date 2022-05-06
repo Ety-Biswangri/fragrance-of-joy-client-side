@@ -31,7 +31,7 @@ const Home = () => {
                 }
                 <div className="sliced-inventories-container mb-4">
                     {
-                        slicedInventories.map(inventory => <Container>
+                        slicedInventories.map(inventory => <Container key={inventory._id}>
                             <CardGroup style={{ height: "38rem" }}>
                                 <Card key={inventory._id} className="card-container h-100">
                                     <Card.Img variant="top" src={inventory.image} className="img-fluid image" />

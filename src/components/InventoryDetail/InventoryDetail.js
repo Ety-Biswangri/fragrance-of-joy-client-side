@@ -18,6 +18,10 @@ const InventoryDetail = () => {
     }, [id, isReload]);
 
     const handleDelivered = (id) => {
+        if (inventory.quantity < 1) {
+            return;
+        }
+
         const quantity = parseInt(inventory.quantity) - 1;
         const updateQuantity = { quantity };
 
@@ -75,7 +79,7 @@ const InventoryDetail = () => {
                             Price: ${inventory.price}
                         </Card.Text>
                         <Card.Text>
-                            Quantity: {inventory.quantity}
+                            Quantity: {inventory.quantity === 0 ? "Sold" : inventory.quantity}
                         </Card.Text>
                         <Card.Text>
                             Supplied By: {inventory.supplierName}

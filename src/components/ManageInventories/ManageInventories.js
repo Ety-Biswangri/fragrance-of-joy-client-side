@@ -46,9 +46,9 @@ const ManageInventories = () => {
 
             <div className="sliced-inventories-container my-4">
                 {
-                    inventories.map(inventory => <Container>
+                    inventories.map(inventory => <Container key={inventory._id}>
                         <CardGroup style={{ height: "38rem" }}>
-                            <Card key={inventory._id}
+                            <Card
                                 className="card-container h-100">
                                 <Card.Img variant="top" src={inventory.image} className="img-fluid image" />
                                 <Card.Body>
@@ -60,7 +60,7 @@ const ManageInventories = () => {
                                         Price: ${inventory.price}
                                     </Card.Text>
                                     <Card.Text>
-                                        Quantity: {inventory.quantity}
+                                        Quantity: {inventory.quantity === 0 ? "Sold" : inventory.quantity}
                                     </Card.Text>
                                     <Card.Text>
                                         Supplied By: {inventory.supplierName}

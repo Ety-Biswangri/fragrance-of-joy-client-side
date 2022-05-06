@@ -30,7 +30,7 @@ const Header = () => {
 
                                         <Nav.Link as={Link} to="/addItems">Add Items</Nav.Link>
 
-                                        {/* <Nav.Link as={Link} to="/manageItems">Manage Items</Nav.Link> */}
+                                        {/* <Nav.Link as={Link} to="/manageInventories">Manage Items</Nav.Link> */}
 
                                         <Button style={{ backgroundColor: "lightblue", color: "black" }} onClick={() => signOut(auth)}>Log Out</Button>
                                     </>

@@ -50,8 +50,8 @@ const Login = () => {
     }
 
     if (user) {
-        const url = `https://mysterious-wildwood-65853.herokuapp.com/login`;
-        console.log(user?.user?.email);
+        const url = `http://localhost:5000/login`;
+        // console.log(user?.user?.email);
 
         fetch(url, {
             method: 'POST',
@@ -64,7 +64,7 @@ const Login = () => {
         })
             .then((response) => response.json())
             .then((data) => {
-                console.log(data);
+                // console.log(data);
                 localStorage.setItem('accessToken', data.token);
                 navigate(from, { replace: true });
             });
