@@ -6,6 +6,7 @@ import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import Loading from '../../SharedPage/Loading/Loading';
+import useAccessToken from '../../../hooks/useAccessToken';
 
 const Registration = () => {
     const [name, setName] = useState('');
@@ -19,6 +20,7 @@ const Registration = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const navigate = useNavigate();
+    const [accessToken] = useAccessToken(user);
 
     const handleNameChange = event => {
         setName(event.target.value);
@@ -50,7 +52,7 @@ const Registration = () => {
         return <Loading></Loading>;
     }
 
-    if (user) {
+    if (accessToken) {
         navigate('/home');
     }
 
