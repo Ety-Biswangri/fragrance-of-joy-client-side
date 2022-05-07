@@ -2,9 +2,8 @@
 
 Live Website Link: [Create React App](https://github.com/facebook/create-react-app).
 
-Live Website Link: [Create React App](https://github.com/facebook/create-react-app).
 
-Stackoverflow Question Link: (https://github.com/facebook/create-react-apphttps://stackoverflow.com/q/72150678/18392006).
+Stackoverflow Question Link: https://stackoverflow.com/q/72150678/18392006
 
 ## Available Scripts
 
