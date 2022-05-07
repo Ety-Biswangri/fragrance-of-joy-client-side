@@ -1,0 +1,15 @@
+.image-background {
+    background-color: black;
+}
+
+.slide-image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: .5;
+    height: 100%;
+}
+
+.slide-caption {
+    margin-bottom: 11rem;
+}
