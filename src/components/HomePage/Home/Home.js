@@ -15,6 +15,13 @@ const Home = () => {
         navigate(`/inventory/${id}`);
     }
 
+    const sold = <span className='text-danger fw-bold'>Sold Out</span>
+    const available = <span className='fw-bold text-success'>Available</span>
+
+    const displayDescription = (description) => {
+        return description.length < 100 ? description : description.slice(0, 97) + "...";
+    }
+
     return (
         <div>
             <div>
@@ -22,7 +29,7 @@ const Home = () => {
             </div>
 
             <div className='my-5'>
-                <h2 className='my-5 text-center'>Inventories</h2>
+                <h2 className='my-5 text-center'>Inventory Items</h2>
                 {
                     inventories.length === 0 ?
                         <Loading></Loading>
@@ -36,23 +43,27 @@ const Home = () => {
                                 <Card key={inventory._id} className="card-container h-100">
                                     <Card.Img variant="top" src={inventory.image} className="img-fluid image" style={{ height: '230px' }} />
                                     <Card.Body>
-                                        <Card.Title>{inventory.name}</Card.Title>
-                                        <Card.Text>
-                                            {inventory.description}
+                                        <Card.Title className='fw-bolder'>{inventory.name}</Card.Title>
+                                        <Card.Text style={{ textAlign: "justify" }} title={inventory.description}>
+                                            {
+                                                displayDescription(inventory.description)
+                                            }
                                         </Card.Text>
                                         <Card.Text>
-                                            Price: ${inventory.price}
+                                            <span className='card-points'> Price:</span> ${inventory.price}
                                         </Card.Text>
                                         <Card.Text>
-                                            Quantity: {inventory.quantity}
+                                            <span className='card-points'>Quantity:</span> {inventory.quantity}
                                         </Card.Text>
                                         <Card.Text>
-                                            Supplied By: {inventory.supplierName}
+                                            <span className='card-points'>Supplied By:</span> {inventory.supplierName}
                                         </Card.Text>
-                                        <Card.Text>Product Status: {inventory.quantity === 0 ? "Sold Out" : 'Available'}</Card.Text>
+                                        <Card.Text>
+                                            <span className='card-points'>Product Status:</span> {inventory.quantity === 0 ? sold : available}
+                                        </Card.Text>
 
                                         <div className='d-flex justify-content-center'>
-                                            <Button variant="primary" className='card-button w-100' onClick={() => navigateToInventoryDetail(inventory._id)}>Update</Button>
+                                            <Button className='card-button w-100 update-button' onClick={() => navigateToInventoryDetail(inventory._id)}>Update</Button>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -62,7 +73,7 @@ const Home = () => {
                 </div>
                 <div className='text-center'>
                     <Link to="/manageInventories">
-                        <Button variant="success">Manage Inventories</Button>
+                        <Button style={{ backgroundColor: "#a9d6e5", color: "black", fontWeight: "640" }}>Manage Inventories</Button>
                     </Link>
                 </div>
             </div>

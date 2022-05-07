@@ -20,17 +20,25 @@
     bottom: 0;
 }
 
+.update-button {
+    background-color: #2836be;
+}
+
+.card-points {
+    font-weight: bold;
+}
+
 
 /* responsiveness */
 
-@media screen and (max-width: 1023px) and (min-width: 760px) {
+@media screen and (max-width: 1223px) and (min-width: 802px) {
     .sliced-inventories-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media screen and (max-width: 761px) {
+@media screen and (max-width: 801px) {
     .sliced-inventories-container {
         display: grid;
         grid-template-columns: repeat(1, 1fr);

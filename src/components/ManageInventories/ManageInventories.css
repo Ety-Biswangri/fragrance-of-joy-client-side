@@ -1,8 +1,16 @@
 .card-group-style {
     height: 36rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.delete-button {
+    background-color: #e41602;
+    border: #fd2813;
+}
 
+.delete-button:hover {
+    background-color: #fd2813;
+}
 
 @media screen and (max-width:1178px) and (min-width: 1024px) {
     .card-group-style {
@@ -16,8 +24,14 @@
     }
 }
 
-@media screen and (max-width:367px) {
+@media screen and (max-width: 488px) {
     .card-group-style {
-        height: 39rem;
+        height: 38rem;
+    }
+}
+
+@media screen and (max-width: 378px) {
+    .card-group-style {
+        height: 40rem;
     }
 }

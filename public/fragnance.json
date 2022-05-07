@@ -1,58 +1,58 @@
 [
     {
-        "name": "Chanel Coco Perfume",
+        "name": "Coco Mademoiselle Parfum",
         "image": "https://raw.githubusercontent.com/Ety-Biswangri/images/main/perfumes/chanel-coco.jpg",
-        "description": "Pariatur proident Lorem occaecat veniam deserunt eu anim ipsum elit. Aute pariatur est laborum sunt.",
+        "description": "Coco Mademoiselle Parfum by Chanel is a Amber Floral fragrance for women. Top notes are Bergamot, Orange and Grapefruit.",
         "price": 3700,
         "quantity": 27,
-        "supplierName": "Alice Hartman"
+        "supplierName": "Chanel"
     },
     {
         "name": "Kenzo Jungle Le Tigre",
         "image": "https://raw.githubusercontent.com/Ety-Biswangri/images/main/perfumes/kenzo.jpg",
-        "description": "Pariatur proident Lorem occaecat veniam deserunt eu anim ipsum elit. Aute pariatur est laborum sunt.",
+        "description": "Kenzo Jungle le Tigre by Kenzo is a Amber Spicy fragrance for women. Top notes are Kumquat, Tangerine and Orange.",
         "price": 2300,
         "quantity": 27,
-        "supplierName": "Hester Long"
+        "supplierName": "Kenzo"
     },
     {
-        "name": "Versace Perfume",
+        "name": "Versace Eros",
         "image": "https://raw.githubusercontent.com/Ety-Biswangri/images/main/perfumes/versace.jpg",
-        "description": "Pariatur proident Lorem occaecat veniam deserunt eu anim ipsum elit. Aute pariatur est laborum sunt.",
+        "description": "Eros by Versace is a Aromatic Fougere fragrance for men. Top notes are Mint, Green Apple and Lemon.",
         "price": 3900,
         "quantity": 36,
-        "supplierName": "Myra Giles"
+        "supplierName": "Versace"
     },
     {
         "name": "Bleu de Chanel",
         "image": "https://raw.githubusercontent.com/Ety-Biswangri/images/main/perfumes/bleu.jpg",
-        "description": "Pariatur proident Lorem occaecat veniam deserunt eu anim ipsum elit. Aute pariatur est laborum sunt.",
+        "description": "Bleu de Chanel by Chanel is a Woody Aromatic fragrance for men. Top notes are Grapefruit, Lemon, Mint and Pink Pepper.",
         "price": 3800,
         "quantity": 38,
-        "supplierName": "Wong Schroeder"
+        "supplierName": "Chanel"
     },
     {
-        "name": "Park Avenue Perfume",
+        "name": "Park Avenue Euphoria",
         "image": "https://raw.githubusercontent.com/Ety-Biswangri/images/main/perfumes/park-avenue.jpg",
-        "description": "Pariatur proident Lorem occaecat veniam deserunt eu anim ipsum elit. Aute pariatur est laborum sunt.",
+        "description": "The premium scent of Park Avenue Conquer gives the wearer unique and intense confidence of ruling the room with their mere presence.",
         "price": 3200,
         "quantity": 22,
-        "supplierName": "Grace Mosley"
+        "supplierName": "Raymond"
     },
     {
         "name": "Black Opium Eau De Parfum",
         "image": "https://raw.githubusercontent.com/Ety-Biswangri/images/main/perfumes/black-opium.jpg",
-        "description": "Pariatur proident Lorem occaecat veniam deserunt eu anim ipsum elit. Aute pariatur est laborum sunt.",
+        "description": "Black Opium Eau de Parfum is a modern glam rock version of a classic feminine scent. A Warm and spicy fragnance with coffee, white flowers and vanilla.",
         "price": 3100,
         "quantity": 38,
-        "supplierName": "Lynne Castaneda"
+        "supplierName": "Yves Saint Laurent"
     },
     {
         "name": "Davidoff Cool Water EDT",
         "image": "https://raw.githubusercontent.com/Ety-Biswangri/images/main/perfumes/cool-water.jpg",
-        "description": "Pariatur proident Lorem occaecat veniam deserunt eu anim ipsum elit. Aute pariatur est laborum sunt.",
+        "description": "Cool Water is fresh and sharp, simple and very masculine. Top notes include mint and green nuances, lavender, coriander and rosemary.",
         "price": 3400,
         "quantity": 35,
-        "supplierName": "Felecia Gill"
+        "supplierName": "Davidoff"
     }
 ]

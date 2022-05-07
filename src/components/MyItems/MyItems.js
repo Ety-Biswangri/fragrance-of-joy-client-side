@@ -5,7 +5,6 @@ import { Button, Card, CardGroup, Container } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-import Loading from '../SharedPage/Loading/Loading';
 import './MyItems.css';
 
 const MyItems = () => {
@@ -53,35 +52,45 @@ const MyItems = () => {
         }
     }
 
+    const sold = <span className='text-danger fw-bold'>Sold Out</span>
+    const available = <span className='fw-bold text-success'>Available</span>
+
+    const displayDescription = (description) => {
+        return description.length < 100 ? description : description.slice(0, 97) + "...";
+    }
+
     return (
         <div className='my-items'>
-            <h1 className='text-center my-5'>My Items: {items.length}</h1>
+            <h2 className='text-center my-5'>My Total Items: {items.length}</h2>
 
             <div className="sliced-inventories-container my-4">
                 {
                     items.map(item => <Container key={item._id}>
                         <CardGroup className='card-group-style'>
-                            <Card key={item._id}
-                                className="card-container h-100">
+                            <Card key={item._id} className="card-container h-100">
                                 <Card.Img variant="top" src={item.image} className="img-fluid image" style={{ height: '230px' }} />
                                 <Card.Body>
-                                    <Card.Title>{item.name}</Card.Title>
-                                    <Card.Text>
-                                        {item.description}
+                                    <Card.Title className='fw-bolder'>{item.name}</Card.Title>
+                                    <Card.Text style={{ textAlign: "justify" }} title={item.description}>
+                                        {
+                                            displayDescription(item.description)
+                                        }
                                     </Card.Text>
                                     <Card.Text>
-                                        Price: ${item.price}
+                                        <span className='card-points'> Price:</span> ${item.price}
                                     </Card.Text>
                                     <Card.Text>
-                                        Quantity: {item.quantity}
+                                        <span className='card-points'>Quantity:</span> {item.quantity}
                                     </Card.Text>
                                     <Card.Text>
-                                        Supplied By: {item.supplierName}
+                                        <span className='card-points'>Supplied By:</span> {item.supplierName}
                                     </Card.Text>
-                                    <Card.Text>Product Status: {item.quantity === 0 ? "Sold Out" : 'Available'}</Card.Text>
+                                    <Card.Text>
+                                        <span className='card-points'>Product Status:</span> {item.quantity === 0 ? sold : available}
+                                    </Card.Text>
 
                                     <div className='d-flex justify-content-center'>
-                                        <Button className='card-button w-100' variant="danger" onClick={() => handleDelete(item._id)}>Delete</Button>
+                                        <Button className='card-button w-100 delete-button' onClick={() => handleDelete(item._id)}>Delete</Button>
                                     </div>
                                 </Card.Body>
                             </Card>

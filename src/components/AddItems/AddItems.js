@@ -25,13 +25,13 @@ const AddItems = () => {
 
     return (
         <div className='w-50 mx-auto my-5' style={{ minHeight: "50vh" }}>
-            <h2 className='text-center'>Add New Items</h2>
+            <h2 className='text-center mb-4'>Add New Item</h2>
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
-                <input placeholder='Name' type="text" className='my-2' {...register("name", { required: true, maxLength: 50 })} />
+                <input placeholder='Name' type="text" {...register("name", { required: true, maxLength: 50 })} />
 
                 <input placeholder='Email' type="email" className='my-2' {...register("email")} readOnly value={user?.email} />
 
-                <textarea placeholder='Description (max 100 characters)' className='mb-2' {...register("description", { required: true, maxLength: 100 })} />
+                <textarea placeholder='Description' className='mb-2' {...register("description", { required: true })} />
 
                 <input placeholder='Price' type="number" className='mb-2' {...register("price", { required: true, maxLength: 20 })} />
 
@@ -41,7 +41,7 @@ const AddItems = () => {
 
                 <input placeholder='Image URL' type="text" className='mb-4' {...register("image", { required: true })} />
 
-                <input type="submit" value="Add Items" />
+                <input type="submit" style={{ backgroundColor: "#3bb630", border: "none", color: "white", fontWeight: "600", padding: "0.3rem" }} value="Add Items" />
             </form>
         </div>
     );

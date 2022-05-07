@@ -1,5 +1,6 @@
 import React from 'react';
-import { Carousel } from 'react-bootstrap';
+import { Button, Carousel } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import banner1 from '../../../images/perfume-banner1.jpg';
 import banner2 from '../../../images/perfume-banner2.jpg';
 import banner3 from '../../../images/perfume-banner3.jpg';
@@ -16,8 +17,12 @@ const BannerSection = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption className='slide-caption'>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h2 >Collection of Best Perfumes</h2>
+                        <div className='text-center'>
+                            <Link to="/addItems">
+                                <Button style={{ backgroundColor: "#a9d6e5", fontWeight: "600", color: "Black" }}>Add New Perfume</Button>
+                            </Link>
+                        </div>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item className='image-background'>
@@ -28,11 +33,15 @@ const BannerSection = () => {
                     />
 
                     <Carousel.Caption className='slide-caption'>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h2>Exclusive Perfumes Item</h2>
+                        <div className='text-center'>
+                            <Link to="/addItems">
+                                <Button style={{ backgroundColor: "#a9d6e5", fontWeight: "600", color: "Black" }}>Add New Perfume</Button>
+                            </Link>
+                        </div>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item className='image-background'>
+                {/* <Carousel.Item className='image-background'>
                     <img style={{ height: "35rem" }}
                         className="d-block w-100 fluid slide-image"
                         src={banner3}
@@ -43,7 +52,7 @@ const BannerSection = () => {
                         <h3>Third slide label</h3>
                         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                     </Carousel.Caption>
-                </Carousel.Item>
+                </Carousel.Item> */}
             </Carousel>
         </div>
     );

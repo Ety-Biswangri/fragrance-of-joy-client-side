@@ -1,15 +1,32 @@
 .image-background {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
 }
 
 .slide-image {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    opacity: .5;
+    opacity: .3;
     height: 100%;
 }
 
 .slide-caption {
     margin-bottom: 11rem;
+}
+
+.slide-caption h2 {
+    font-size: 3rem;
+}
+
+
+@media screen and (max-width: 1023px) and (min-width:768px) {
+    .slide-caption h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .slide-caption h2 {
+        font-size: 2rem;
+    }
 }
