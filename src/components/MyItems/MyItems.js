@@ -78,11 +78,12 @@ const MyItems = () => {
                                         Price: ${item.price}
                                     </Card.Text>
                                     <Card.Text>
-                                        Quantity: {item.quantity === 0 ? "Sold" : item.quantity}
+                                        Quantity: {item.quantity}
                                     </Card.Text>
                                     <Card.Text>
                                         Supplied By: {item.supplierName}
                                     </Card.Text>
+                                    <Card.Text>Product Status: {item.quantity === 0 ? "Sold Out" : 'Available'}</Card.Text>
 
                                     <div className='d-flex justify-content-center'>
                                         <Button className='card-button' variant="danger" onClick={() => handleDelete(item._id)}>Delete</Button>

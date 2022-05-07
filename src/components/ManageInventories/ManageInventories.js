@@ -60,11 +60,12 @@ const ManageInventories = () => {
                                         Price: ${inventory.price}
                                     </Card.Text>
                                     <Card.Text>
-                                        Quantity: {inventory.quantity === 0 ? "Sold" : inventory.quantity}
+                                        Quantity: {inventory.quantity}
                                     </Card.Text>
                                     <Card.Text>
                                         Supplied By: {inventory.supplierName}
                                     </Card.Text>
+                                    <Card.Text>Product Status: {inventory.quantity === 0 ? "Sold Out" : 'Available'}</Card.Text>
 
                                     <div className='d-flex justify-content-center'>
                                         <Button style={{ marginRight: "6rem" }} variant="primary" className='card-button' onClick={() => navigateToInventoryDetail(inventory._id)}>Update</Button>

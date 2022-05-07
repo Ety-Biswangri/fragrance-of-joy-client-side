@@ -79,18 +79,18 @@ const InventoryDetail = () => {
                             Price: ${inventory.price}
                         </Card.Text>
                         <Card.Text>
-                            Quantity: {inventory.quantity === 0 ? "Sold" : inventory.quantity}
+                            Quantity: {inventory.quantity}
                         </Card.Text>
                         <Card.Text>
                             Supplied By: {inventory.supplierName}
                         </Card.Text>
-                        <Card.Text>Product Status: Sold</Card.Text>
+                        <Card.Text>Product Status: {inventory.quantity === 0 ? "Sold Out" : 'Available'}</Card.Text>
 
                         <Button onClick={() => handleDelivered(id)} variant="primary mb-4">Delivered</Button>
 
                         <div>
                             <form className='' onSubmit={handleSubmit(onSubmit)}>
-                                <input placeholder='Enter quantity' type="number" className='mb-2' {...register("quantity", { required: true, maxLength: 20 })} />
+                                <input placeholder='Enter quantity' min='1' type="number" className='mb-2' {...register("quantity", { required: true, maxLength: 20 })} />
 
                                 <input type="submit" value="Restock" />
                             </form>
