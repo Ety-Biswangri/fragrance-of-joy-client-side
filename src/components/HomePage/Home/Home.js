@@ -32,9 +32,9 @@ const Home = () => {
                 <div className="sliced-inventories-container mb-4">
                     {
                         slicedInventories.map(inventory => <Container key={inventory._id}>
-                            <CardGroup style={{ height: "38rem" }}>
+                            <CardGroup className='card-group-style'>
                                 <Card key={inventory._id} className="card-container h-100">
-                                    <Card.Img variant="top" src={inventory.image} className="img-fluid image" />
+                                    <Card.Img variant="top" src={inventory.image} className="img-fluid image" style={{ height: '230px' }} />
                                     <Card.Body>
                                         <Card.Title>{inventory.name}</Card.Title>
                                         <Card.Text>
@@ -49,9 +49,10 @@ const Home = () => {
                                         <Card.Text>
                                             Supplied By: {inventory.supplierName}
                                         </Card.Text>
+                                        <Card.Text>Product Status: {inventory.quantity === 0 ? "Sold Out" : 'Available'}</Card.Text>
 
                                         <div className='d-flex justify-content-center'>
-                                            <Button variant="primary" className='card-button' onClick={() => navigateToInventoryDetail(inventory._id)}>Update</Button>
+                                            <Button variant="primary" className='card-button w-100' onClick={() => navigateToInventoryDetail(inventory._id)}>Update</Button>
                                         </div>
                                     </Card.Body>
                                 </Card>

@@ -56,19 +56,14 @@ const MyItems = () => {
     return (
         <div className='my-items'>
             <h1 className='text-center my-5'>My Items: {items.length}</h1>
-            {
-                items.length === 0 ?
-                    <Loading></Loading>
-                    :
-                    ''
-            }
+
             <div className="sliced-inventories-container my-4">
                 {
                     items.map(item => <Container key={item._id}>
-                        <CardGroup style={{ height: "38rem" }}>
+                        <CardGroup className='card-group-style'>
                             <Card key={item._id}
                                 className="card-container h-100">
-                                <Card.Img variant="top" src={item.image} className="img-fluid image" />
+                                <Card.Img variant="top" src={item.image} className="img-fluid image" style={{ height: '230px' }} />
                                 <Card.Body>
                                     <Card.Title>{item.name}</Card.Title>
                                     <Card.Text>
@@ -86,7 +81,7 @@ const MyItems = () => {
                                     <Card.Text>Product Status: {item.quantity === 0 ? "Sold Out" : 'Available'}</Card.Text>
 
                                     <div className='d-flex justify-content-center'>
-                                        <Button className='card-button' variant="danger" onClick={() => handleDelete(item._id)}>Delete</Button>
+                                        <Button className='card-button w-100' variant="danger" onClick={() => handleDelete(item._id)}>Delete</Button>
                                     </div>
                                 </Card.Body>
                             </Card>
