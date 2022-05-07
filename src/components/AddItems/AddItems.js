@@ -28,7 +28,7 @@ const AddItems = () => {
 
     return (
         <div className='w-50 mx-auto my-5' style={{ minHeight: "50vh" }}>
-            <h2 className='text-center mb-4'>Add New Item</h2>
+            <h2 className='text-center mb-4' style={{ color: "#01497c" }}>Add New Item</h2>
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                 <input placeholder='Name' type="text" {...register("name", { required: true, maxLength: 50 })} />
 
@@ -44,7 +44,7 @@ const AddItems = () => {
 
                 <input placeholder='Image URL' type="text" className='mb-4' {...register("image", { required: true })} />
 
-                <input type="submit" style={{ backgroundColor: "#3bb630", border: "none", color: "white", fontWeight: "600", padding: "0.3rem" }} value="Add Items" />
+                <input className='w-75 mx-auto' type="submit" style={{ backgroundColor: "#3bb630", border: "none", color: "white", fontWeight: "600", padding: "0.3rem", borderRadius: "4px", fontSize: "1.1rem" }} value="Add Items" />
             </form>
         </div>
     );

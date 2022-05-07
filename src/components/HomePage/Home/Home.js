@@ -29,7 +29,7 @@ const Home = () => {
             </div>
 
             <div className='my-5'>
-                <h2 className='my-5 text-center'>Inventory Items</h2>
+                <h2 className='my-5 text-center' style={{ color: "#01497c" }}>Inventory Items</h2>
                 {
                     inventories.length === 0 ?
                         <Loading></Loading>
@@ -73,7 +73,7 @@ const Home = () => {
                 </div>
                 <div className='text-center'>
                     <Link to="/manageInventories">
-                        <Button style={{ backgroundColor: "lightblue", color: "black", fontWeight: "640" }}>Manage Inventories</Button>
+                        <Button style={{ backgroundColor: "lightblue", fontWeight: "650", color: "Black" }}>Manage Inventories</Button>
                     </Link>
                 </div>
             </div>

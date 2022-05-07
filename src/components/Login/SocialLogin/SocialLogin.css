@@ -1,0 +1,5 @@
+@media screen and (max-width: 335px) {
+    .social-login-button span {
+        font-size: 0.9rem;
+    }
+}

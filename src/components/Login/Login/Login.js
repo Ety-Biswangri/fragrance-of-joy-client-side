@@ -66,7 +66,7 @@ const Login = () => {
 
     return (
         <div className='w-50 mx-auto my-5'>
-            <h1>Please Login</h1>
+            <h1 style={{ color: "#01497c" }} className="text-center mb-4">Please Login</h1>
             <Form onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
@@ -78,7 +78,7 @@ const Login = () => {
                     <Form.Control type="password" placeholder="Password" required autoComplete='off' onChange={handlePasswordChange} />
                 </Form.Group>
 
-                <Button variant="primary" type="submit">
+                <Button style={{ backgroundColor: "#2c7da0" }} type="submit">
                     Submit
                 </Button>
             </Form>

@@ -61,7 +61,7 @@ const MyItems = () => {
 
     return (
         <div className='my-items'>
-            <h2 className='text-center my-5'>My Total Items: {items.length}</h2>
+            <h2 className='text-center my-5' style={{ color: "#01497c" }}>My Total Items: {items.length}</h2>
 
             <div className="sliced-inventories-container my-4">
                 {

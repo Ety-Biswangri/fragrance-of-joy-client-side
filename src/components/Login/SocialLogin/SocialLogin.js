@@ -6,6 +6,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import useAccessToken from '../../../hooks/useAccessToken';
 import Loading from '../../SharedPage/Loading/Loading';
+import './SocialLogin.css';
 
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
@@ -32,16 +33,18 @@ const SocialLogin = () => {
     return (
         <div>
             <div className='d-flex align-items-center justify-content-center'>
-                <div style={{ height: "1px", backgroundColor: "blue" }} className='w-25'></div>
-                <p className='mt-2 px-2'>or</p>
-                <div style={{ height: "1px", backgroundColor: "blue" }} className='w-25'></div>
+                <div style={{ height: "1px", backgroundColor: "#2a6f97" }} className='w-25'></div>
+                <p className='mt-2 px-2'>Or</p>
+                <div style={{ height: "1px", backgroundColor: "#2a6f97" }} className='w-25'></div>
             </div>
             {errorMessage}
 
-            <div>
-                <Button className='btn w-50 d-flex justify-content-center align-items-center mx-auto my-2' onClick={() => signInWithGoogle()}>
-                    <BsGoogle className='fs-4'></BsGoogle>
-                    <span className='px-2'>Google Sign In</span>
+            <div className='text-center social-login-button'>
+                <Button style={{ backgroundColor: "#2c7da0" }} onClick={() => signInWithGoogle()}>
+                    <div className='d-flex justify-content-center align-items-center'>
+                        <BsGoogle className='fs-5'></BsGoogle>
+                        <span className='px-2'>Google Sign In</span>
+                    </div>
                 </Button>
             </div>
         </div>

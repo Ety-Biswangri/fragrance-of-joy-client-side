@@ -58,7 +58,7 @@ const Registration = () => {
 
     return (
         <div className='w-50 mx-auto my-5'>
-            <h1>Please Register</h1>
+            <h1 style={{ color: "#01497c" }} className="text-center mb-4">Please Register</h1>
             <Form onSubmit={handleRegister}>
                 <Form.Group className="mb-3" controlId="formBasicName">
                     <Form.Label>Name</Form.Label>
@@ -80,7 +80,7 @@ const Registration = () => {
                     <Form.Control type="password" placeholder="Password" required onChange={handleConfirmPasswordChange} />
                 </Form.Group>
 
-                <Button variant="primary" type="submit">
+                <Button style={{ backgroundColor: "#2c7da0" }} type="submit">
                     Submit
                 </Button>
             </Form>

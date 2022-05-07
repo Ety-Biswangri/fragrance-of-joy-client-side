@@ -37,7 +37,7 @@ const ManageInventories = () => {
 
     return (
         <div className='my-5'>
-            <h2 className='my-5 text-center'>Total Inventory Items: {inventories.length}</h2>
+            <h2 className='my-5 text-center' style={{ color: "#01497c" }}>Total Inventory Items: {inventories.length}</h2>
 
             <div className='text-center'>
                 <Link to="/addItems">
@@ -81,7 +81,7 @@ const ManageInventories = () => {
                                     <div className='d-flex justify-content-center'>
                                         <Button style={{ marginRight: "6rem" }} className='card-button update-button' onClick={() => navigateToInventoryDetail(inventory._id)}>Update</Button>
 
-                                        <Button style={{ marginLeft: "6rem" }} className='card-button delete-button' onClick={() => handleDelete(inventory._id)}>Delete</Button>
+                                        <button style={{ marginLeft: "6rem", padding: "0.47rem 0.6rem" }} className='card-button delete-button' onClick={() => handleDelete(inventory._id)}>Delete</button>
                                     </div>
 
                                 </Card.Body>
