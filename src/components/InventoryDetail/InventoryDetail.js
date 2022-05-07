@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Button, Card, Container } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { Link, useParams } from 'react-router-dom';
+import './InventoryDetail.css';
 
 const InventoryDetail = () => {
     const { id } = useParams();
@@ -40,8 +41,9 @@ const InventoryDetail = () => {
             })
     }
 
-    const onSubmit = data => {
+    const onSubmit = (data, event) => {
         // console.log(data);
+        event.target.reset();
 
         const quantity = parseInt(data.quantity) + parseInt(inventory.quantity);
         const updateQuantity = { quantity };
@@ -62,44 +64,57 @@ const InventoryDetail = () => {
 
     };
 
+    const sold = <span className='text-danger fw-bold'>Sold Out</span>
+    const available = <span className='fw-bold text-success'>Available</span>
+
     return (
         <div className='my-5'>
             <Container>
-                <Card key={inventory._id}>
-                    <div className='mx-auto my-3'>
-                        <img style={{ width: "25rem" }} className='img-fluid' src={inventory.image} alt="" />
-                    </div>
-                    <Card.Body className='text-center'>
-                        <Card.Title>{inventory.name}</Card.Title>
-                        <Card.Text>Product Id: {inventory._id}</Card.Text>
-                        <Card.Text>
-                            {inventory.description}
-                        </Card.Text>
-                        <Card.Text>
-                            Price: ${inventory.price}
-                        </Card.Text>
-                        <Card.Text>
-                            Quantity: {inventory.quantity}
-                        </Card.Text>
-                        <Card.Text>
-                            Supplied By: {inventory.supplierName}
-                        </Card.Text>
-                        <Card.Text>Product Status: {inventory.quantity === 0 ? "Sold Out" : 'Available'}</Card.Text>
-
-                        <Button onClick={() => handleDelivered(id)} variant="primary mb-4">Delivered</Button>
-
-                        <div>
-                            <form className='' onSubmit={handleSubmit(onSubmit)}>
-                                <input placeholder='Enter quantity' min='1' type="number" className='mb-2' {...register("quantity", { required: true, maxLength: 20 })} />
-
-                                <input type="submit" value="Restock" />
-                            </form>
+                <Card className='inventory-detail-card'>
+                    <div className="d-md-flex justify-content-center align-items-center">
+                        <div className='w-100'>
+                            <img className='img-fluid inventory-detail-image' src={inventory.image} alt="" />
                         </div>
-                    </Card.Body>
+                        <div className='w-100'>
+                            <Card.Body className='w-100'>
+                                <Card.Title className='fw-bolder mb-3 text-center'>{inventory.name}</Card.Title>
+
+                                <Card.Text className='text-center'> <span className='fw-bold'>Id:</span> {inventory._id}</Card.Text>
+
+                                <Card.Text style={{ textAlign: "justify" }} >
+                                    <span className='fw-bold'>Description:</span> {inventory.description}
+                                </Card.Text>
+
+                                <Card.Text>
+                                    <span className='fw-bold'>Price:</span> ${inventory.price}
+                                </Card.Text>
+
+                                <Card.Text>
+                                    <span className='fw-bold'>Quantity:</span> {inventory.quantity}
+                                </Card.Text>
+
+                                <Card.Text>
+                                    <span className='fw-bold'>Supplied By:</span> {inventory.supplierName}
+                                </Card.Text>
+
+                                <Card.Text> <span className='fw-bold'>Product Status:</span> {inventory.quantity === 0 ? sold : available}</Card.Text>
+
+                                <Button onClick={() => handleDelivered(id)} style={{ backgroundColor: "#cbad20", marginBottom: "1rem", border: "none" }}>Delivered</Button>
+
+                                <div>
+                                    <form className='' onSubmit={handleSubmit(onSubmit)}>
+                                        <input placeholder='Enter quantity' min='0' type="number" className='mb-2' {...register("quantity", { required: true, maxLength: 20 })} />
+
+                                        <input type="submit" style={{ backgroundColor: "#3bb630", border: "none", color: "white", padding: "0.2rem 0.5rem", marginLeft: "3px", borderRadius: "4px" }} value="Restock" />
+                                    </form>
+                                </div>
+                            </Card.Body>
+                        </div>
+                    </div>
                 </Card>
-                <div className='text-center mt-3'>
+                <div className='text-center mt-5'>
                     <Link to="/manageInventories">
-                        <Button variant="success">Manage Inventories</Button>
+                        <Button style={{ backgroundColor: "lightblue", color: "black", fontWeight: "640" }}>Manage Inventories</Button>
                     </Link>
                 </div>
             </Container>

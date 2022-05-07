@@ -6,6 +6,9 @@
 .delete-button {
     background-color: #e41602;
     border: #fd2813;
+    padding: 0.4rem;
+    border-radius: 3px;
+    color: white;
 }
 
 .delete-button:hover {

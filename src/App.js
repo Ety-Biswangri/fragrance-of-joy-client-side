@@ -12,6 +12,7 @@ import AddItems from './components/AddItems/AddItems';
 import MyItems from './components/MyItems/MyItems';
 import RequireAuth from './components/Login/RequireAuth/RequireAuth';
 import InventoryDetail from './components/InventoryDetail/InventoryDetail';
+import { ToastContainer } from 'react-toastify';
 
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
     </div>
   );
 }

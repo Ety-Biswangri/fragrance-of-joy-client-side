@@ -20,7 +20,7 @@ const BannerSection = () => {
                         <h2 >Collection of Best Perfumes</h2>
                         <div className='text-center'>
                             <Link to="/addItems">
-                                <Button style={{ backgroundColor: "#a9d6e5", fontWeight: "600", color: "Black" }}>Add New Perfume</Button>
+                                <Button style={{ backgroundColor: "lightblue", fontWeight: "600", color: "Black" }}>Add New Perfume</Button>
                             </Link>
                         </div>
                     </Carousel.Caption>
@@ -36,7 +36,7 @@ const BannerSection = () => {
                         <h2>Exclusive Perfumes Item</h2>
                         <div className='text-center'>
                             <Link to="/addItems">
-                                <Button style={{ backgroundColor: "#a9d6e5", fontWeight: "600", color: "Black" }}>Add New Perfume</Button>
+                                <Button style={{ backgroundColor: "lightblue", fontWeight: "600", color: "Black" }}>Add New Perfume</Button>
                             </Link>
                         </div>
                     </Carousel.Caption>

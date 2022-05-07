@@ -2,13 +2,16 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import { toast } from 'react-toastify';
 
 const AddItems = () => {
     const { register, handleSubmit } = useForm();
     const [user] = useAuthState(auth);
 
-    const onSubmit = data => {
-        console.log(data)
+    const onSubmit = (data, event) => {
+        // console.log(data)
+        event.target.reset();
+        toast('Item is Added');
         const url = `https://mysterious-wildwood-65853.herokuapp.com/inventories`;
         fetch(url, {
             method: 'POST',

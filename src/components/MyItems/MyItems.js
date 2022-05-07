@@ -90,7 +90,7 @@ const MyItems = () => {
                                     </Card.Text>
 
                                     <div className='d-flex justify-content-center'>
-                                        <Button className='card-button w-100 delete-button' onClick={() => handleDelete(item._id)}>Delete</Button>
+                                        <button className='card-button w-100 delete-button' onClick={() => handleDelete(item._id)}>Delete</button>
                                     </div>
                                 </Card.Body>
                             </Card>

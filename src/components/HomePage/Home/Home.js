@@ -73,7 +73,7 @@ const Home = () => {
                 </div>
                 <div className='text-center'>
                     <Link to="/manageInventories">
-                        <Button style={{ backgroundColor: "#a9d6e5", color: "black", fontWeight: "640" }}>Manage Inventories</Button>
+                        <Button style={{ backgroundColor: "lightblue", color: "black", fontWeight: "640" }}>Manage Inventories</Button>
                     </Link>
                 </div>
             </div>
