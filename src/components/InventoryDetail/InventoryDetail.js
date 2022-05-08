@@ -86,11 +86,12 @@ const InventoryDetail = () => {
                                 </Card.Text>
 
                                 <Card.Text>
-                                    <span className='fw-bold'>Price:</span> ${inventory.price}
+                                    <span className='fw-bold'>Price:</span>
+                                    <span style={{ color: "#cd8f18", fontWeight: "600" }}> ${inventory.price}</span>
                                 </Card.Text>
 
                                 <Card.Text>
-                                    <span className='fw-bold'>Quantity:</span>  <span style={{ color: "#cd8f18", fontWeight: "600" }}> ${inventory.price}</span>
+                                    <span className='fw-bold'>Quantity:</span> {inventory.quantity}
                                 </Card.Text>
 
                                 <Card.Text>
