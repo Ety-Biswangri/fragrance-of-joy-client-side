@@ -7,9 +7,9 @@ import { GrFacebook } from 'react-icons/gr';
 
 const OurTeam = () => {
     return (
-        <div className='my-5'>
+        <div className='teams'>
             <Container>
-                <h2 className='text-center mb-4'>Team Members</h2>
+                <h2 className='text-center mt-5 mb-4' style={{ color: "#01497c" }}>Team Members</h2>
                 <div className='team-cards'>
                     <Card className='team-card'>
                         <Card.Img className='team-image img-fluid' variant="top" src="https://raw.githubusercontent.com/Ety-Biswangri/images/main/person4.jpg" />

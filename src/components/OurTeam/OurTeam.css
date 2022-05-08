@@ -1,3 +1,8 @@
+.teams {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
 .team-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

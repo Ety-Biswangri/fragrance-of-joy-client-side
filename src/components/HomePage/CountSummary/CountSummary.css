@@ -1,0 +1,58 @@
+.count {
+    margin-top: 5rem;
+    background-color: #01497c;
+    height: 9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.count-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+}
+
+.count-cards .count-card {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.count-cards .count-image {
+    height: 3.5rem;
+    width: 3.5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 991px) {
+    .count-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .count {
+        height: 15rem;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .count {
+        height: 17rem;
+    }
+}
+
+@media screen and (max-width: 435px) {
+    .count-cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .count {
+        height: 30rem;
+    }
+}

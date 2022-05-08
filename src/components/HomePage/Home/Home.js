@@ -4,6 +4,7 @@ import useInventories from '../../../hooks/useInventories';
 import OurTeam from '../../OurTeam/OurTeam';
 import Loading from '../../SharedPage/Loading/Loading';
 import BannerSection from '../BannerSection/BannerSection';
+import CountSummary from '../CountSummary/CountSummary';
 import './Home.css';
 
 const Home = () => {
@@ -77,6 +78,10 @@ const Home = () => {
                         <Button style={{ backgroundColor: "lightblue", fontWeight: "650", color: "Black" }}>Manage Inventories</Button>
                     </Link>
                 </div>
+            </div>
+
+            <div>
+                <CountSummary></CountSummary>
             </div>
 
             <div>
