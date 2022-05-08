@@ -10,7 +10,7 @@ const Blogs = () => {
                 <div className='my-5'>
                     <Card className='mb-4'>
                         <Card.Body>
-                            <Card.Title className='mb-4'>Difference between javascript and nodejs</Card.Title>
+                            <Card.Title className='mb-4'>Difference between JavaScript and Node.js.</Card.Title>
                             <Card.Text>
                                 <p>
                                     Differences between JavaScript and nodejs are given below:
@@ -33,7 +33,25 @@ const Blogs = () => {
                         <Card.Body>
                             <Card.Title className='mb-4'>Differences between sql and nosql databases.</Card.Title>
                             <Card.Text>
-                                Chief Excecutive Officer
+                                <p>
+                                    Differences between SQL and NoSQL databases are given below:
+                                </p>
+                                <ul>
+                                    <li>
+                                        SQL stands for Structured Query Language, are called as Relational Database Management System. Whereas NoSQL stands for Not SQL, are called as Non-relational Database System.
+                                    </li>
+                                    <li>
+                                        SQL databases are table-based (with fixed rows and columns). On the other hand, NoSQL databases can be document, key-valu, graph based.
+                                    </li>
+                                    <li>
+                                        SQL databases are the databases with a pre-defined schema. On the contrary, NoSQL databases use dynamic schema for unstructured data.
+                                    </li>
+                                    <li>
+                                        Example of SQL database: MySQL, Oracle, Microsoft SQL Server, PostgreSQL.
+                                        <br />
+                                        Example of NoSQL database: MongoDB, CouchDB, DynamoDB.
+                                    </li>
+                                </ul>
                             </Card.Text>
                         </Card.Body>
                     </Card>
