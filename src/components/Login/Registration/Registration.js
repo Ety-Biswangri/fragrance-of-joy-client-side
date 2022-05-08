@@ -46,7 +46,6 @@ const Registration = () => {
             return;
         }
         createUserWithEmailAndPassword(email, password);
-        toast("Verification Email is sent");
     }
 
     let errorMessage;
