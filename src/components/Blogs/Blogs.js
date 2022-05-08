@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Container } from 'react-bootstrap';
+import './Blogs.css';
 
 const Blogs = () => {
     return (
@@ -7,15 +8,15 @@ const Blogs = () => {
             <Container>
                 <h2 className='my-5 text-center' style={{ color: "#01497c" }}>Blogs</h2>
 
-                <div className='my-5'>
-                    <Card className='mb-4'>
-                        <Card.Body>
-                            <Card.Title className='mb-4'>Difference between JavaScript and Node.js.</Card.Title>
+                <div className='my-5 blog-cards'>
+                    <Card className='blog-margin'>
+                        <Card.Body className='blog-card'>
+                            <Card.Title className='mb-4 question'>Difference between JavaScript and Node.js.</Card.Title>
                             <Card.Text>
                                 <p>
                                     Differences between JavaScript and nodejs are given below:
                                 </p>
-                                <ul>
+                                <ul className='blog-ul'>
                                     <li>
                                         JavaScript is a programming language and it runs in web browsers. On the other hand, Node.js is a JavaScript runtime environment.
                                     </li>
@@ -29,14 +30,14 @@ const Blogs = () => {
                             </Card.Text>
                         </Card.Body>
                     </Card>
-                    <Card className='mb-4'>
-                        <Card.Body>
-                            <Card.Title className='mb-4'>Differences between sql and nosql databases.</Card.Title>
+                    <Card className='blog-margin'>
+                        <Card.Body className='blog-card'>
+                            <Card.Title className='mb-4 question'>Differences between sql and nosql databases.</Card.Title>
                             <Card.Text>
                                 <p>
                                     Differences between SQL and NoSQL databases are given below:
                                 </p>
-                                <ul>
+                                <ul className='blog-ul'>
                                     <li>
                                         SQL stands for Structured Query Language, are called as Relational Database Management System. Whereas NoSQL stands for Not SQL, are called as Non-relational Database System.
                                     </li>
@@ -56,14 +57,16 @@ const Blogs = () => {
                         </Card.Body>
                     </Card>
                     <Card>
-                        <Card.Body>
-                            <Card.Title className='mb-4'>What is the purpose of jwt and how does it work?</Card.Title>
+                        <Card.Body className='blog-card'>
+                            <Card.Title className='mb-4 question'>What is the purpose of jwt and how does it work?</Card.Title>
                             <Card.Text>
                                 <p>
                                     The purpose of using JWT is for securing APIs.JWT is mainly used for authorization purposes. Without JWT user can not access the protected route.
                                     <br />
-                                    JWT stands for JSON Web Token. The working process of JWT is given below:
-                                    <ul>
+                                    <span style={{ display: "block" }} className="my-3">
+                                        JWT stands for JSON Web Token. The working process of JWT is given below:
+                                    </span>
+                                    <ul className='blog-ul'>
                                         <li>
                                             User sign in with username and password.
                                         </li>

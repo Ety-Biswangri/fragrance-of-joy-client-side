@@ -44,7 +44,7 @@ const AddItems = () => {
 
                 <input placeholder='Image URL' type="text" className='mb-4' {...register("image", { required: true })} />
 
-                <input className='w-75 mx-auto' type="submit" style={{ backgroundColor: "#3bb630", border: "none", color: "white", fontWeight: "600", padding: "0.3rem", borderRadius: "4px", fontSize: "1.1rem" }} value="Add Items" />
+                <input className='w-75 mx-auto' type="submit" style={{ backgroundColor: "#3bb630", border: "none", color: "white", fontWeight: "400", padding: "0.3rem", borderRadius: "4px", fontSize: "1.1rem" }} value="Add Items" />
             </form>
         </div>
     );

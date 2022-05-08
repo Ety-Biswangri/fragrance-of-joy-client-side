@@ -1,0 +1,37 @@
+.blog-cards {
+    text-align: justify;
+    width: 80%;
+    margin: auto;
+    background-color: #01497cbb;
+    padding: 4%;
+}
+
+.blog-cards .question {
+    font-size: 1.5rem;
+}
+
+.blog-cards p,
+.blog-ul {
+    font-size: 1.1rem;
+}
+
+.blog-cards .blog-ul li {
+    margin-bottom: 0.8rem;
+}
+
+.blog-margin {
+    margin-bottom: 2rem;
+}
+
+.blog-card {
+    padding: 3%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+
+@media screen and (max-width: 991px) {
+    .blog-cards {
+        width: 100%;
+    }
+
+}
