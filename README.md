@@ -16,6 +16,7 @@ This project is about Perfume Warehouse Management. In this project, website use
 * User can manage (add, delete, update item quantity) all the inventory items 
 * Latest four perfume items are displayed in the "Latest Perfumes" section on Home page
 * In "My Items" page, user can see the items added by her/him
+* The Website is fully responsive
 
 ### Server-Side:
 * Products data are stored in MongoDB database
