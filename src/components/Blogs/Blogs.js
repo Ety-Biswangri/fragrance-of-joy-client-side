@@ -57,9 +57,27 @@ const Blogs = () => {
                     </Card>
                     <Card>
                         <Card.Body>
-                            <Card.Title className='mb-4'>What is the purpose of jwt and how does it work</Card.Title>
+                            <Card.Title className='mb-4'>What is the purpose of jwt and how does it work?</Card.Title>
                             <Card.Text>
-                                Chief Excecutive Officer
+                                <p>
+                                    The purpose of using JWT is for securing APIs.JWT is mainly used for authorization purposes. Without JWT user can not access the protected route.
+                                    <br />
+                                    JWT stands for JSON Web Token. The working process of JWT is given below:
+                                    <ul>
+                                        <li>
+                                            User sign in with username and password.
+                                        </li>
+                                        <li>
+                                            Authentication server creates a token for the user and sends the token to the user.
+                                        </li>
+                                        <li>
+                                            The token is stored in the client side. When the user makes a request, he/she sends a copy of the stored token to the server.
+                                        </li>
+                                        <li>
+                                            Server verifies the JWT signature before giving the authorization and responds to the user's request.
+                                        </li>
+                                    </ul>
+                                </p>
                             </Card.Text>
                         </Card.Body>
                     </Card>
