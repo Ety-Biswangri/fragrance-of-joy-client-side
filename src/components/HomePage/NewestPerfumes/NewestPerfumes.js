@@ -9,13 +9,13 @@ const NewestPerfumes = () => {
 
     return (
         <div className='latest-perfume'>
-            <h2>Latest Perfumes</h2>
+            <h2 style={{ color: "#01497c" }}>Latest Perfumes</h2>
             <Container>
                 <Carousel className="carouselItem">
                     {
                         slicedPerfumes.map(inventory => <Carousel.Item key={inventory._id} >
                             <Card className='text-center'>
-                                <Card.Img variant="top" src={inventory.image} className="img-fluid" style={{ height: '20rem' }} />
+                                <Card.Img variant="top" src={inventory.image} className="img-fluid latest-perfume-image" style={{ height: '20rem' }} />
                                 <Card.Body className='mb-3'>
                                     <Card.Title className='my-3 fw-bolder fs-4'>{inventory.name}</Card.Title>
                                     <Card.Text className='fs-5'>
