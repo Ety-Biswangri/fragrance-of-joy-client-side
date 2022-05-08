@@ -32,6 +32,22 @@
 @media screen and (max-width: 991px) {
     .blog-cards {
         width: 100%;
+        padding: 6%;
     }
 
+    .blog-cards .question {
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .blog-cards {
+        width: 100%;
+        padding: 8%;
+    }
+
+    .blog-margin {
+        margin-bottom: 1.4rem;
+    }
 }

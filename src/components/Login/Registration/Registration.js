@@ -7,6 +7,7 @@ import auth from '../../../firebase.init';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import Loading from '../../SharedPage/Loading/Loading';
 import useAccessToken from '../../../hooks/useAccessToken';
+import { toast } from 'react-toastify';
 
 const Registration = () => {
     const [name, setName] = useState('');
@@ -40,7 +41,12 @@ const Registration = () => {
 
     const handleRegister = event => {
         event.preventDefault();
+        if (password !== confirmPassword) {
+            toast("Please provide the correct password");
+            return;
+        }
         createUserWithEmailAndPassword(email, password);
+        toast("Verification Email is sent");
     }
 
     let errorMessage;

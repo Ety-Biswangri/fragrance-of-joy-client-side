@@ -14,7 +14,7 @@ const Blogs = () => {
                             <Card.Title className='mb-4 question'>Difference between JavaScript and Node.js.</Card.Title>
                             <Card.Text>
                                 <p>
-                                    Differences between JavaScript and nodejs are given below:
+                                    Differences between JavaScript and Node.js are given below:
                                 </p>
                                 <ul className='blog-ul'>
                                     <li>
@@ -32,7 +32,7 @@ const Blogs = () => {
                     </Card>
                     <Card className='blog-margin'>
                         <Card.Body className='blog-card'>
-                            <Card.Title className='mb-4 question'>Differences between sql and nosql databases.</Card.Title>
+                            <Card.Title className='mb-4 question'>Differences between SQL and NoSQL databases.</Card.Title>
                             <Card.Text>
                                 <p>
                                     Differences between SQL and NoSQL databases are given below:
@@ -58,7 +58,7 @@ const Blogs = () => {
                     </Card>
                     <Card>
                         <Card.Body className='blog-card'>
-                            <Card.Title className='mb-4 question'>What is the purpose of jwt and how does it work?</Card.Title>
+                            <Card.Title className='mb-4 question'>What is the purpose of JWT and how does it work?</Card.Title>
                             <Card.Text>
                                 <p>
                                     The purpose of using JWT is for securing APIs.JWT is mainly used for authorization purposes. Without JWT user can not access the protected route.
