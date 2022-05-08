@@ -1,11 +1,17 @@
 import React from 'react';
-import { Card, CardGroup, Container, Carousel } from 'react-bootstrap';
+import { Card, CardGroup, Container, Carousel, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import useInventories from '../../../hooks/useInventories';
 import './NewestPerfumes.css';
 
 const NewestPerfumes = () => {
     const [inventories] = useInventories();
     const slicedPerfumes = inventories.slice(-4);
+    const navigate = useNavigate();
+
+    const navigateToInventoryDetail = id => {
+        navigate(`/inventory/${id}`);
+    }
 
     return (
         <div className='latest-perfume'>
@@ -24,6 +30,10 @@ const NewestPerfumes = () => {
                                     <Card.Text>
                                         <span className='fw-bold'>Quantity:</span> {inventory.quantity}
                                     </Card.Text>
+
+                                    <div className='d-flex justify-content-center'>
+                                        <Button className='card-button w-50 update-button' onClick={() => navigateToInventoryDetail(inventory._id)}>Update</Button>
+                                    </div>
                                 </Card.Body>
                             </Card>
                         </Carousel.Item>)
