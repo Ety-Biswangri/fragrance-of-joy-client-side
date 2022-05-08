@@ -3,7 +3,6 @@ import { Button, Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import banner1 from '../../../images/perfume-banner1.jpg';
 import banner2 from '../../../images/perfume-banner2.jpg';
-import banner3 from '../../../images/perfume-banner3.jpg';
 import './BannerSection.css';
 
 const BannerSection = () => {
