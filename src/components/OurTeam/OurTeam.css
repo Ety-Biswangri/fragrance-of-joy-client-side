@@ -1,0 +1,31 @@
+.team-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.team-cards .team-card {
+    margin: 1rem;
+    text-align: center;
+}
+
+.team-image {
+    height: 200px;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+}
+
+@media screen and (max-width: 991px) {
+    .team-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .team-cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

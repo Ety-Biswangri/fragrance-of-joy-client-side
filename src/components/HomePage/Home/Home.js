@@ -1,6 +1,7 @@
 import { Button, Card, CardGroup, Container } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import useInventories from '../../../hooks/useInventories';
+import OurTeam from '../../OurTeam/OurTeam';
 import Loading from '../../SharedPage/Loading/Loading';
 import BannerSection from '../BannerSection/BannerSection';
 import './Home.css';
@@ -40,7 +41,7 @@ const Home = () => {
                     {
                         slicedInventories.map(inventory => <Container key={inventory._id}>
                             <CardGroup className='card-group-style'>
-                                <Card key={inventory._id} className="card-container h-100">
+                                <Card className="card-container h-100">
                                     <Card.Img variant="top" src={inventory.image} className="img-fluid image" style={{ height: '230px' }} />
                                     <Card.Body>
                                         <Card.Title className='fw-bolder'>{inventory.name}</Card.Title>
@@ -78,7 +79,9 @@ const Home = () => {
                 </div>
             </div>
 
-
+            <div>
+                <OurTeam></OurTeam>
+            </div>
         </div>
     );
 };
