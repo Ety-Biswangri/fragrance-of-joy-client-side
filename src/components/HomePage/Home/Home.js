@@ -5,6 +5,7 @@ import OurTeam from '../../OurTeam/OurTeam';
 import Loading from '../../SharedPage/Loading/Loading';
 import BannerSection from '../BannerSection/BannerSection';
 import CountSummary from '../CountSummary/CountSummary';
+import NewestPerfumes from '../NewestPerfumes/NewestPerfumes';
 import './Home.css';
 
 const Home = () => {
@@ -82,6 +83,10 @@ const Home = () => {
 
             <div>
                 <CountSummary></CountSummary>
+            </div>
+
+            <div>
+                <NewestPerfumes></NewestPerfumes>
             </div>
 
             <div>
