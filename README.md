@@ -12,12 +12,19 @@ This project is about Perfume Warehouse Management. In this project, website use
 
 ## Project Features and Functunalities
 
-### Client Side
+### Client-Side:
 *  
 * 
 * 
 * 
 * 
+
+### Server-Side:
+* Products data are stored in MongoDB database
+* User Authentication (email/password and Google sign in) is implemented using Firebase Authentication
+* Email verification after registration and password resetting are implemented.
+* APIs are secured by using JWT for accessing the protected routes: Manage Inventories, My Items, Add Items.
+* GET, POST, PUT, DELETE APIs are implemented for reading, creating, updating and deleting any item from the database.
 
 
 
