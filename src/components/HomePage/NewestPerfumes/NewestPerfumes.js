@@ -17,10 +17,10 @@ const NewestPerfumes = () => {
         <div className='latest-perfume'>
             <h2 style={{ color: "#01497c" }}>Latest Perfumes</h2>
             <Container>
-                <Carousel className="carouselItem">
+                <Carousel className="carouselItem h-100">
                     {
                         slicedPerfumes.map(inventory => <Carousel.Item key={inventory._id} >
-                            <Card className='text-center'>
+                            <Card className='text-center latest-perfume-card'>
                                 <Card.Img variant="top" src={inventory.image} className="img-fluid latest-perfume-image" style={{ height: '20rem' }} />
                                 <Card.Body className='mb-3'>
                                     <Card.Title className='my-3 fw-bolder fs-4'>{inventory.name}</Card.Title>
@@ -32,7 +32,7 @@ const NewestPerfumes = () => {
                                     </Card.Text>
 
                                     <div className='d-flex justify-content-center'>
-                                        <Button className='card-button w-50 update-button' onClick={() => navigateToInventoryDetail(inventory._id)}>Update</Button>
+                                        <Button className='card-button w-75 update-button' onClick={() => navigateToInventoryDetail(inventory._id)}>Update</Button>
                                     </div>
                                 </Card.Body>
                             </Card>

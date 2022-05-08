@@ -31,6 +31,8 @@ const Header = () => {
                                 </>
                             }
 
+                            <Nav.Link className='navbar-font' as={Link} to="/blogs">Blogs</Nav.Link>
+
                             <Nav.Link className='navbar-font' as={Link} to="/aboutUs">Our Team</Nav.Link>
 
                             {

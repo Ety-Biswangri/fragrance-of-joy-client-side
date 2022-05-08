@@ -13,7 +13,18 @@
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
+.latest-perfume-card {
+    height: 35rem;
+}
+
 .latest-perfume-image {
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+
+@media screen and (max-width: 991px) {
+    .carouselItem {
+        width: 80%;
+    }
 }
