@@ -90,7 +90,7 @@ const InventoryDetail = () => {
                                 </Card.Text>
 
                                 <Card.Text>
-                                    <span className='fw-bold'>Quantity:</span> {inventory.quantity}
+                                    <span className='fw-bold'>Quantity:</span>  <span style={{ color: "#cd8f18", fontWeight: "600" }}> ${inventory.price}</span>
                                 </Card.Text>
 
                                 <Card.Text>
@@ -114,7 +114,7 @@ const InventoryDetail = () => {
                 </Card>
                 <div className='text-center mt-5'>
                     <Link to="/manageInventories">
-                        <Button style={{ backgroundColor: "lightblue", color: "black", fontWeight: "640" }}>Manage Inventories</Button>
+                        <Button style={{ backgroundColor: "#2a6f97", fontWeight: "640" }}>Manage Inventories</Button>
                     </Link>
                 </div>
             </Container>

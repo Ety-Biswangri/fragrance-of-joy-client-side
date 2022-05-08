@@ -1,5 +1,5 @@
 .image-background {
-    background-color: rgb(0, 0, 0);
+    /* background-color: white; */
 }
 
 .slide-image {
@@ -8,6 +8,7 @@
     background-size: cover;
     opacity: .4;
     height: 100%;
+    mix-blend-mode: color;
 }
 
 .slide-caption {

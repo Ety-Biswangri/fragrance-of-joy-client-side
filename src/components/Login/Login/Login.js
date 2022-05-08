@@ -78,7 +78,7 @@ const Login = () => {
                     <Form.Control type="password" placeholder="Password" required autoComplete='off' onChange={handlePasswordChange} />
                 </Form.Group>
 
-                <Button style={{ backgroundColor: "#2c7da0" }} type="submit">
+                <Button style={{ backgroundColor: "#2a6f97" }} type="submit">
                     Submit
                 </Button>
             </Form>

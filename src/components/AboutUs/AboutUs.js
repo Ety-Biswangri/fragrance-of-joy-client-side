@@ -1,11 +1,10 @@
 import React from 'react';
 import { Button, Card, CardGroup, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import './OurTeam.css';
 import { BsLinkedin, BsTwitter } from 'react-icons/bs';
 import { GrFacebook } from 'react-icons/gr';
 
-const OurTeam = () => {
+const AboutUs = () => {
     return (
         <div className='teams'>
             <Container>
@@ -57,11 +56,34 @@ const OurTeam = () => {
                             </Link>
                         </Card.Body>
                     </Card>
-                </div>
-                <div className='text-center mt-2'>
-                    <Link to="/aboutUs">
-                        <Button style={{ backgroundColor: "#2a6f97", fontWeight: "640" }}>See All Members</Button>
-                    </Link>
+                    <Card className='team-card'>
+                        <Card.Img className='img-fluid team-image' variant="top" src="https://raw.githubusercontent.com/Ety-Biswangri/images/main/person6.jpg" />
+                        <Card.Body>
+                            <Card.Title>Amelia Kerr</Card.Title>
+                            <Card.Text>
+                                Marketing Head
+                            </Card.Text>
+                            <Link to="#">
+                                <BsLinkedin className='ms-2 fs-5'></BsLinkedin>
+                                <GrFacebook className='ms-4 me-2 fs-5'></GrFacebook>
+                                <BsTwitter className='ms-3 fs-5'></BsTwitter>
+                            </Link>
+                        </Card.Body>
+                    </Card>
+                    <Card className='team-card'>
+                        <Card.Img className='img-fluid team-image' variant="top" src="https://raw.githubusercontent.com/Ety-Biswangri/images/main/person3.jpg" />
+                        <Card.Body>
+                            <Card.Title>Emma Mackey</Card.Title>
+                            <Card.Text>
+                                Support Manager
+                            </Card.Text>
+                            <Link to="#">
+                                <BsLinkedin className='ms-2 fs-5'></BsLinkedin>
+                                <GrFacebook className='ms-4 me-2 fs-5'></GrFacebook>
+                                <BsTwitter className='ms-3 fs-5'></BsTwitter>
+                            </Link>
+                        </Card.Body>
+                    </Card>
                 </div>
             </Container>
 
@@ -69,4 +91,4 @@ const OurTeam = () => {
     );
 };
 
-export default OurTeam;
+export default AboutUs;

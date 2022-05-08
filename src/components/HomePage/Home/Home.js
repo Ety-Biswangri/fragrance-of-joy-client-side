@@ -53,7 +53,8 @@ const Home = () => {
                                             }
                                         </Card.Text>
                                         <Card.Text>
-                                            <span className='card-points'> Price:</span> ${inventory.price}
+                                            <span className='card-points'> Price:</span>
+                                            <span style={{ color: "#cd8f18", fontWeight: "600" }}> ${inventory.price}</span>
                                         </Card.Text>
                                         <Card.Text>
                                             <span className='card-points'>Quantity:</span> {inventory.quantity}
@@ -76,7 +77,7 @@ const Home = () => {
                 </div>
                 <div className='text-center'>
                     <Link to="/manageInventories">
-                        <Button style={{ backgroundColor: "lightblue", fontWeight: "650", color: "Black" }}>Manage Inventories</Button>
+                        <Button style={{ backgroundColor: "#2a6f97", fontWeight: "500" }}>Manage Inventories</Button>
                     </Link>
                 </div>
             </div>

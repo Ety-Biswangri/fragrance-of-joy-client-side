@@ -19,7 +19,7 @@ const NewestPerfumes = () => {
                                 <Card.Body className='mb-3'>
                                     <Card.Title className='my-3 fw-bolder fs-4'>{inventory.name}</Card.Title>
                                     <Card.Text className='fs-5'>
-                                        <span className='fw-bold'> Price:</span> <span style={{ color: "#c0930c" }}>${inventory.price}</span>
+                                        <span className='fw-bold'>Price:</span>  <span style={{ color: "#cd8f18", fontWeight: "600" }}> ${inventory.price}</span>
                                     </Card.Text>
                                     <Card.Text>
                                         <span className='fw-bold'>Quantity:</span> {inventory.quantity}

@@ -24,17 +24,19 @@ const Header = () => {
                             <Nav.Link className='navbar-font' as={Link} to="/manageInventories">Manage Inventories</Nav.Link>
 
                             {
+                                user && <>
+                                    <Nav.Link className='navbar-font' as={Link} to="/myItems">My Items</Nav.Link>
+
+                                    <Nav.Link className='navbar-font' as={Link} to="/addItems">Add Items</Nav.Link>
+                                </>
+                            }
+
+                            <Nav.Link className='navbar-font' as={Link} to="/aboutUs">Our Team</Nav.Link>
+
+                            {
                                 user
                                     ?
                                     <>
-                                        <Nav.Link className='navbar-font' as={Link} to="/myItems">My Items</Nav.Link>
-
-                                        <Nav.Link className='navbar-font' as={Link} to="/addItems">Add Items</Nav.Link>
-
-                                        {/* <Nav.Link as={Link} to="/manageInventories">Manage Items</Nav.Link> */}
-
-
-
                                         <Button style={{ backgroundColor: "lightblue", color: "black", fontWeight: "600" }} onClick={() => signOut(auth)}>Log Out</Button>
                                     </>
                                     :

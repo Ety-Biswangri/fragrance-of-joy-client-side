@@ -77,7 +77,8 @@ const MyItems = () => {
                                         }
                                     </Card.Text>
                                     <Card.Text>
-                                        <span className='card-points'> Price:</span> ${item.price}
+                                        <span className='card-points'> Price:</span>
+                                        <span style={{ color: "#cd8f18", fontWeight: "600" }}> ${item.price}</span>
                                     </Card.Text>
                                     <Card.Text>
                                         <span className='card-points'>Quantity:</span> {item.quantity}

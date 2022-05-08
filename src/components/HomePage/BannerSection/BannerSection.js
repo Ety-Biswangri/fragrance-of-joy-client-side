@@ -16,10 +16,10 @@ const BannerSection = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption className='slide-caption'>
-                        <h2 style={{ color: "#edf6f9" }}>Collection of Best Perfumes</h2>
+                        <h2 style={{ color: "#01497c", fontWeight: "600" }}>Collection of Best Perfumes</h2>
                         <div className='text-center'>
                             <Link to="/addItems">
-                                <Button style={{ backgroundColor: "lightblue", fontWeight: "650", color: "Black" }}>Add New Perfume</Button>
+                                <Button style={{ backgroundColor: "#2a6f97", fontWeight: "500" }}>Add New Perfume</Button>
                             </Link>
                         </div>
                     </Carousel.Caption>
@@ -32,10 +32,10 @@ const BannerSection = () => {
                     />
 
                     <Carousel.Caption className='slide-caption'>
-                        <h2 style={{ color: "#edf6f9" }}>Exclusive Perfumes Item</h2>
+                        <h2 style={{ color: "#01497c", fontWeight: "600" }}>Exclusive Perfumes Item</h2>
                         <div className='text-center'>
                             <Link to="/addItems">
-                                <Button style={{ backgroundColor: "lightblue", fontWeight: "650", color: "Black" }}>Add New Perfume</Button>
+                                <Button style={{ backgroundColor: "#2a6f97", fontWeight: "500" }}>Add New Perfume</Button>
                             </Link>
                         </div>
                     </Carousel.Caption>

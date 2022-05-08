@@ -40,7 +40,7 @@ const SocialLogin = () => {
             {errorMessage}
 
             <div className='text-center social-login-button'>
-                <Button style={{ backgroundColor: "#2c7da0" }} onClick={() => signInWithGoogle()}>
+                <Button style={{ backgroundColor: "#2a6f97" }} onClick={() => signInWithGoogle()}>
                     <div className='d-flex justify-content-center align-items-center'>
                         <BsGoogle className='fs-5'></BsGoogle>
                         <span className='px-2'>Google Sign In</span>
