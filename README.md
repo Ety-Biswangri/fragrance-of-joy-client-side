@@ -12,6 +12,7 @@ This project is about Perfume Warehouse Management. In this project, website use
 
 ## Project Features and Functunalities
 
+### Client Side
 *  
 * 
 * 
