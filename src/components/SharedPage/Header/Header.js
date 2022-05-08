@@ -21,10 +21,10 @@ const Header = () => {
                         <Nav className="ms-auto">
                             <Nav.Link className='navbar-font' as={Link} to="/home">Home</Nav.Link>
 
-                            <Nav.Link className='navbar-font' as={Link} to="/manageInventories">Manage Inventories</Nav.Link>
-
                             {
                                 user && <>
+                                    <Nav.Link className='navbar-font' as={Link} to="/manageInventories">Manage Inventories</Nav.Link>
+
                                     <Nav.Link className='navbar-font' as={Link} to="/myItems">My Items</Nav.Link>
 
                                     <Nav.Link className='navbar-font' as={Link} to="/addItems">Add Items</Nav.Link>
