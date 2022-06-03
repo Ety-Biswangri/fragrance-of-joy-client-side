@@ -14,7 +14,7 @@ const Header = () => {
                 backgroundColor: "#013a63"
             }}>
                 <Container>
-                    <Navbar.Brand className='fw-bold' as={Link} to="/">Fragnance of Joy</Navbar.Brand>
+                    <Navbar.Brand className='fw-bold' as={Link} to="/">Fragrance of Joy</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
 
