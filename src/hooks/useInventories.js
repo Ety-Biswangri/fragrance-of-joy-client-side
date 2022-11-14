@@ -4,7 +4,7 @@ const useInventories = () => {
     const [inventories, setInventories] = useState([]);
 
     useEffect(() => {
-        fetch("https://mysterious-wildwood-65853.herokuapp.com/inventories")
+        fetch("https://fragrance-of-joy.onrender.com/inventories")
             .then(res => res.json())
             .then(data => setInventories(data));
     }, []);

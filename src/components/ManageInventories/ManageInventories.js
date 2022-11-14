@@ -24,7 +24,7 @@ const ManageInventories = () => {
         const confirmation = window.confirm("Are you sure to delete the item?");
 
         if (confirmation) {
-            fetch(`https://mysterious-wildwood-65853.herokuapp.com/inventory/${id}`, {
+            fetch(`https://fragrance-of-joy.onrender.com/inventory/${id}`, {
                 method: 'DELETE',
             })
                 .then(res => res.json())

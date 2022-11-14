@@ -7,7 +7,7 @@ const useAccessToken = (user) => {
         const loadToken = async () => {
             const email = user?.user?.email;
             if (email) {
-                const { data } = await axios.post(`https://mysterious-wildwood-65853.herokuapp.com/login`, { email });
+                const { data } = await axios.post(`https://fragrance-of-joy.onrender.com/login`, { email });
                 setAccessToken(data.accessToken);
                 localStorage.setItem('accessToken', data.accessToken);
             }

@@ -12,7 +12,7 @@ const AddItems = () => {
         // console.log(data)
         event.target.reset();
         toast('Item is Added');
-        const url = `https://mysterious-wildwood-65853.herokuapp.com/inventories`;
+        const url = `https://fragrance-of-joy.onrender.com/inventories`;
         fetch(url, {
             method: 'POST',
             headers: {

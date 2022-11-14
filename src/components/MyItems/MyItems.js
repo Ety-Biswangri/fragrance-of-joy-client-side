@@ -15,7 +15,7 @@ const MyItems = () => {
     useEffect(() => {
 
         const getMyItems = async () => {
-            const url = `https://mysterious-wildwood-65853.herokuapp.com/items?email=${user?.email}`;
+            const url = `https://fragrance-of-joy.onrender.com/items?email=${user?.email}`;
             try {
                 const { data } = await axios.get(url, {
                     headers: {
@@ -41,7 +41,7 @@ const MyItems = () => {
         const confirmation = window.confirm("Are you sure to delete the item?");
 
         if (confirmation) {
-            fetch(`https://mysterious-wildwood-65853.herokuapp.com/inventory/${id}`, {
+            fetch(`https://fragrance-of-joy.onrender.com/inventory/${id}`, {
                 method: 'DELETE',
             })
                 .then(res => res.json())

@@ -13,7 +13,7 @@ const InventoryDetail = () => {
     // console.log(inventory);
 
     useEffect(() => {
-        fetch(`https://mysterious-wildwood-65853.herokuapp.com/inventory/${id}`)
+        fetch(`https://fragrance-of-joy.onrender.com/inventory/${id}`)
             .then(res => res.json())
             .then(data => setInventory(data));
     }, [id, isReload]);
@@ -26,7 +26,7 @@ const InventoryDetail = () => {
         const quantity = parseInt(inventory.quantity) - 1;
         const updateQuantity = { quantity };
 
-        const url = `https://mysterious-wildwood-65853.herokuapp.com/inventory/${id}`;
+        const url = `https://fragrance-of-joy.onrender.com/inventory/${id}`;
 
         fetch(url, {
             method: "PUT",
@@ -48,7 +48,7 @@ const InventoryDetail = () => {
         const quantity = parseInt(data.quantity) + parseInt(inventory.quantity);
         const updateQuantity = { quantity };
 
-        const url = `https://mysterious-wildwood-65853.herokuapp.com/inventory/${id}`;
+        const url = `https://fragrance-of-joy.onrender.com/inventory/${id}`;
 
         fetch(url, {
             method: "PUT",
